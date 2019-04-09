@@ -21,7 +21,6 @@ public class DFA implements DfaInterface {
     @Override
     public TokenItem getRelop(FileProcessor fileProcessor) {
         TokenItem tokenItem = new TokenItem(LexicalNames.RELOP);
-        //鏂板缓state涓哄垵濮嬬姸鎬�0
         int state = 0;
         char c;
         while(true){
