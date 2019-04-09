@@ -61,4 +61,6 @@ public interface DfaInterface {
      */
     public void fail(FileProcessor fileProcessor);
 
+    public void errorHandler(FileProcessor fileProcessor);
+
 }

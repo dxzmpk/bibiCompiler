@@ -83,53 +83,60 @@ public class DFA implements DfaInterface {
 
     @Override
     public TokenItem getDigitalNumber(FileProcessor fileProcessor) {
-        return null;
+        TokenItem tokenItem = new TokenItem();
+        int state = 12;
+        char c;
+        while(true){
+            switch (state){
+                case 12:
+                    c = fileProcessor.getNextCharacter();
+                    if(isDigit(c)) state = 13;
+                    else fail(fileProcessor);
+                case 13:
+
+                case 14:
+                case 15:
+                case 16:
+                case 17:
+                case 18:
+                case 19:
+                case 20:
+                case 21:
+            }
+        }
     }
 
     @Override
     public TokenItem getNote(FileProcessor fileProcessor) {
-    	TokenItem tokenItem = new TokenItem(LexicalNames.NOTE);
-        int state =22;
-        char c;
-        while(true){
-            switch (state) {
-            case 22:
-            	c = fileProcessor.getNextCharacter();
-            	if(c == '/') state = 23;
-            	else fail(fileProcessor);
-            	break;
-            case 23:
-            	c = fileProcessor.getNextCharacter();
-            	if(c == '*') state = 24;
-            	else state = 28;
-            	break;
-            case 24:
-            	c = fileProcessor.getNextCharacter();
-            	if(c == '*') state = 25;
-            	else if(isLetter(c) == true || isDigit (c))
-            case 28:
-            	tokenItem.setLexicalName(LexicalNames.OPERATOR);
-                fileProcessor.pushBackLastCharacter();
-                tokenItem.setValue("value");
-            }
+        return null;
     }
 
     /**
      * 辅助用方法
      */
 
+    /**
+     * 判断是否为字母或者下划线
+     * @param c
+     * @return
+     */
     @Override
     public boolean isLetter(char c) {
-        return false;
+        return Character.isLetter(c)||c=='_';
     }
 
     @Override
     public boolean isDigit(char c) {
-        return false;
+        return Character.isDigit(c);
     }
 
     @Override
     public void fail(FileProcessor fileProcessor) {
+
+    }
+
+    @Override
+    public void errorHandler(FileProcessor fileProcessor) {
 
     }
 }
