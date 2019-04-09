@@ -29,6 +29,26 @@ public interface DfaInterface {
     public TokenItem getIdentiFier(FileProcessor fileProcessor);
 
     /**
+     * 识别关键字note
+     * @param fileProcessor
+     */
+    public TokenItem getNote(FileProcessor fileProcessor);
+
+    /**
+     * 判断是否为letter
+     * @param c
+     * @return
+     */
+    public boolean isLetter(char c);
+
+    /**
+     * 判断是否为digit数字
+     * @param c
+     * @return
+     */
+    public boolean isDigit(char c);
+
+    /**
      * 识别无符号数字
      * @param fileProcessor
      * @return

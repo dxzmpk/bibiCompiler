@@ -84,6 +84,25 @@ public class DFA implements DfaInterface {
     }
 
     @Override
+    public TokenItem getNote(FileProcessor fileProcessor) {
+        return null;
+    }
+
+    /**
+     * 辅助用方法
+     */
+
+    @Override
+    public boolean isLetter(char c) {
+        return false;
+    }
+
+    @Override
+    public boolean isDigit(char c) {
+        return false;
+    }
+
+    @Override
     public void fail(FileProcessor fileProcessor) {
 
     }
