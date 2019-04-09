@@ -83,33 +83,49 @@ public class DFA implements DfaInterface {
 
     @Override
     public TokenItem getDigitalNumber(FileProcessor fileProcessor) {
-        TokenItem tokenItem = new TokenItem();
-
         return null;
     }
 
     @Override
     public TokenItem getNote(FileProcessor fileProcessor) {
-        return null;
+    	TokenItem tokenItem = new TokenItem(LexicalNames.NOTE);
+        int state =22;
+        char c;
+        while(true){
+            switch (state) {
+            case 22:
+            	c = fileProcessor.getNextCharacter();
+            	if(c == '/') state = 23;
+            	else fail(fileProcessor);
+            	break;
+            case 23:
+            	c = fileProcessor.getNextCharacter();
+            	if(c == '*') state = 24;
+            	else state = 28;
+            	break;
+            case 24:
+            	c = fileProcessor.getNextCharacter();
+            	if(c == '*') state = 25;
+            	else if(isLetter(c) == true || isDigit (c))
+            case 28:
+            	tokenItem.setLexicalName(LexicalNames.OPERATOR);
+                fileProcessor.pushBackLastCharacter();
+                tokenItem.setValue("value");
+            }
     }
 
     /**
      * 辅助用方法
      */
 
-    /**
-     * 判断是否为字母或者下划线
-     * @param c
-     * @return
-     */
     @Override
     public boolean isLetter(char c) {
-        return Character.isLetter(c)||c=='_';
+        return false;
     }
 
     @Override
     public boolean isDigit(char c) {
-        return Character.isDigit(c);
+        return false;
     }
 
     @Override
