@@ -78,7 +78,26 @@ public class DFA implements DfaInterface {
 
     @Override
     public TokenItem getIdentiFier(FileProcessor fileProcessor) {
-        return null;
+    	TokenItem tokenItem = new TokenItem(LexicalNames.IdentiFier);
+        int state =9;
+        char c;
+        while(true){
+            switch (state) {
+            case 9:
+            	c = fileProcessor.getNextCharacter();
+            	if(isLetter(c) == true) state = 10;
+            	else fail(fileProcessor);
+            	break;
+            case 10:
+            	c = fileProcessor.getNextCharacter();
+            	if(isLetter(c) == true || isDigit (c) == true) state = 10;
+            	else state = 11;
+            	break;
+            case 11:
+            	tokenItem.setValue("value");
+                return tokenItem;
+            }
+        }
     }
 
     @Override
@@ -108,7 +127,47 @@ public class DFA implements DfaInterface {
 
     @Override
     public TokenItem getNote(FileProcessor fileProcessor) {
-        return null;
+    	TokenItem tokenItem = new TokenItem(LexicalNames.NOTE);
+        int state =22;
+        char c;
+        while(true){
+            switch (state) {
+            case 22:
+            	c = fileProcessor.getNextCharacter();
+            	if(c == '/') state = 23;
+            	else state = 27;
+            	break;
+            case 23:
+            	c = fileProcessor.getNextCharacter();
+            	if(c == '*') state = 24;
+            	else state = 28;
+            	break;
+            case 24:
+            	c = fileProcessor.getNextCharacter();
+            	if(c == '*') state = 25;
+            	else if(isLetter(c) == true || isDigit (c) == true) state = 24;
+            	else state = 29;
+            	break;
+            case 25:
+            	c = fileProcessor.getNextCharacter();
+            	if(c == '/') state = 26;
+            	else state = 29;
+            	break;
+            case 26:
+            	tokenItem.setValue("value");
+                return tokenItem;
+            case 27:
+            	fail(fileProcessor);
+            	break;
+            case 28:
+            	tokenItem.setLexicalName(LexicalNames.OPERATOR);
+                fileProcessor.pushBackLastCharacter();
+                tokenItem.setValue("value");
+            case 29:
+            	errorHandler(FileProcessor fileProcessor);
+            	break;
+            }
+        }
     }
 
     /**
