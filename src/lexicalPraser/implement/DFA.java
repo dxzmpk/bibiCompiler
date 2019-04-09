@@ -83,6 +83,8 @@ public class DFA implements DfaInterface {
 
     @Override
     public TokenItem getDigitalNumber(FileProcessor fileProcessor) {
+        TokenItem tokenItem = new TokenItem();
+
         return null;
     }
 
@@ -95,14 +97,19 @@ public class DFA implements DfaInterface {
      * 辅助用方法
      */
 
+    /**
+     * 判断是否为字母或者下划线
+     * @param c
+     * @return
+     */
     @Override
     public boolean isLetter(char c) {
-        return false;
+        return Character.isLetter(c)||c=='_';
     }
 
     @Override
     public boolean isDigit(char c) {
-        return false;
+        return Character.isDigit(c);
     }
 
     @Override

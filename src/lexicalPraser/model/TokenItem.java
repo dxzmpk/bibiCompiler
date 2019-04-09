@@ -10,6 +10,9 @@ public class TokenItem {
         this.lexicalName = lexicalName;
     }
 
+    public TokenItem() {
+    }
+
     public LexicalNames getLexicalName() {
         return lexicalName;
     }
