@@ -6,7 +6,11 @@ import lexicalPraser.model.LexicalNames;
 import lexicalPraser.model.TokenItem;
 
 import java.util.List;
-
+/**
+ * 
+ * @author HOU
+ *
+ */
 public class DFA implements DfaInterface {
 
     @Override
@@ -17,7 +21,7 @@ public class DFA implements DfaInterface {
     @Override
     public TokenItem getRelop(FileProcessor fileProcessor) {
         TokenItem tokenItem = new TokenItem(LexicalNames.RELOP);
-        //新建state为初始状态0
+        //鏂板缓state涓哄垵濮嬬姸鎬�0
         int state = 0;
         char c;
         while(true){
