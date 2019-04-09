@@ -8,7 +8,7 @@ import lexicalPraser.model.TokenItem;
 import java.util.List;
 /**
  * 
- * @author HOU
+ * @author dxzmpk assistby houzi
  *
  */
 public class DFA implements DfaInterface {
@@ -78,23 +78,34 @@ public class DFA implements DfaInterface {
 
     @Override
     public TokenItem getIdentiFier(FileProcessor fileProcessor) {
-    	TokenItem tokenItem = new TokenItem(LexicalNames.IdentiFier);
+    	TokenItem tokenItem = new TokenItem(LexicalNames.ID);
         int state =9;
         char c;
+        StringBuilder value = new StringBuilder();
         while(true){
             switch (state) {
             case 9:
             	c = fileProcessor.getNextCharacter();
-            	if(isLetter(c) == true) state = 10;
+            	if(isLetter(c) ) {
+            	    value.append(c);
+            	    state = 10;
+                }
             	else fail(fileProcessor);
             	break;
             case 10:
             	c = fileProcessor.getNextCharacter();
-            	if(isLetter(c) == true || isDigit (c) == true) state = 10;
+            	if(isLetter(c) || isDigit (c)) {
+                    value.append(c);
+            	    state = 10;
+                }
             	else state = 11;
             	break;
             case 11:
-            	tokenItem.setValue("value");
+                if(KeyWordItems.isKeyWord(value.toString())){
+                    tokenItem.setLexicalName(LexicalNames.valueOf(value.toString()));
+                } else {
+                    tokenItem.setValue(value.toString());
+                }
                 return tokenItem;
             }
         }
@@ -102,25 +113,95 @@ public class DFA implements DfaInterface {
 
     @Override
     public TokenItem getDigitalNumber(FileProcessor fileProcessor) {
-        TokenItem tokenItem = new TokenItem();
+        TokenItem tokenItem = new TokenItem(LexicalNames.DIGIT);
         int state = 12;
+        StringBuilder value = new StringBuilder();
         char c;
         while(true){
             switch (state){
                 case 12:
                     c = fileProcessor.getNextCharacter();
-                    if(isDigit(c)) state = 13;
+                    if(isDigit(c)) {
+                        state = 13;
+                        value.append(c);
+                    }
                     else fail(fileProcessor);
                 case 13:
-
+                    c = fileProcessor.getNextCharacter();
+                    if(isDigit(c)){
+                        state = 13;
+                        value.append(c);
+                    } else if(c == '.'){
+                        state = 14;
+                        value.append(c);
+                    } else if(c == 'e' || c == 'E') {
+                        state = 16;
+                        value.append(c);
+                    } else {
+                        state = 20;
+                    }
+                    break;
                 case 14:
+                    c = fileProcessor.getNextCharacter();
+                    if(isDigit(c)){
+                        state = 15;
+                        value.append(c);
+                    } else {
+                        errorHandler(fileProcessor);
+                    }
+                    break;
                 case 15:
+                    c = fileProcessor.getNextCharacter();
+                    if(isDigit(c)){
+                        state = 15;
+                        value.append(c);
+                    } else if(c == 'e' || c == 'E') {
+                        state = 16;
+                        value.append(c);
+                    } else {
+                        state = 20;
+                    }
+                    break;
                 case 16:
+                    c = fileProcessor.getNextCharacter();
+                    if(c == '+' || c == '-'){
+                        state = 17;
+                        value.append(c);
+                    } else if(isDigit(c)){
+                        state = 18;
+                        value.append(c);
+                    } else {
+                        fileProcessor.pushBackLastCharacter();
+                        tokenItem.setValue(value.toString());
+                        return tokenItem;
+                    }
+                    break;
                 case 17:
+                    c = fileProcessor.getNextCharacter();
+                    if(isDigit(c)){
+                        state = 18;
+                        value.append(c);
+                    } else {
+                        errorHandler(fileProcessor);
+                    }
+                    break;
                 case 18:
+                    c = fileProcessor.getNextCharacter();
+                    if(isDigit(c)){
+                        state = 18;
+                        value.append(c);
+                    } else {
+                        state = 19;
+                    }
+                    break;
                 case 19:
+                    fileProcessor.pushBackLastCharacter();
+                    tokenItem.setValue(value.toString());
+                    return tokenItem;
                 case 20:
-                case 21:
+                    fileProcessor.pushBackLastCharacter();
+                    tokenItem.setValue(value.toString());
+                    return tokenItem;
             }
         }
     }
@@ -129,32 +210,48 @@ public class DFA implements DfaInterface {
     public TokenItem getNote(FileProcessor fileProcessor) {
     	TokenItem tokenItem = new TokenItem(LexicalNames.NOTE);
         int state =22;
+        StringBuilder value = new StringBuilder();
         char c;
         while(true){
             switch (state) {
             case 22:
             	c = fileProcessor.getNextCharacter();
-            	if(c == '/') state = 23;
+            	if(c == '/') {
+            	    state = 23;
+                    value.append(c);
+                }
             	else state = 27;
             	break;
             case 23:
             	c = fileProcessor.getNextCharacter();
-            	if(c == '*') state = 24;
+            	if(c == '*') {
+            	    state = 24;
+                    value.append(c);
+            }
             	else state = 28;
             	break;
             case 24:
             	c = fileProcessor.getNextCharacter();
-            	if(c == '*') state = 25;
-            	else if(isLetter(c) == true || isDigit (c) == true) state = 24;
+            	if(c == '*') {
+            	    state = 25;
+                    value.append(c);
+                }
+            	else if(isLetter(c) || isDigit (c)) {
+                    value.append(c);
+            	    state = 24;
+                }
             	else state = 29;
             	break;
             case 25:
             	c = fileProcessor.getNextCharacter();
-            	if(c == '/') state = 26;
+            	if(c == '/') {
+            	    state = 26;
+                    value.append(c);
+                }
             	else state = 29;
             	break;
             case 26:
-            	tokenItem.setValue("value");
+            	tokenItem.setValue(value.toString());
                 return tokenItem;
             case 27:
             	fail(fileProcessor);
@@ -162,9 +259,10 @@ public class DFA implements DfaInterface {
             case 28:
             	tokenItem.setLexicalName(LexicalNames.OPERATOR);
                 fileProcessor.pushBackLastCharacter();
-                tokenItem.setValue("value");
+                tokenItem.setValue(value.toString());
+                return tokenItem;
             case 29:
-            	errorHandler(FileProcessor fileProcessor);
+            	errorHandler(fileProcessor);
             	break;
             }
         }

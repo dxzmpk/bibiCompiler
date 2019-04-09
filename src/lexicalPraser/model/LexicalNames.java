@@ -3,8 +3,8 @@ package lexicalPraser.model;
 public enum LexicalNames {
 
     /**
-     * symbol鎸囦唬symbol 飪�;|=|{|}|(|)
+     * symbol代表定界符号 生成式为：symbol --> ;|=|{|}|(|)
      */
-    RELOP, ID, DIGIT, KEYWORD, SYMBOL,NOTE,OPERATOR;
+    RELOP, ID, DIGIT, SYMBOL, NOTE, OPERATOR, IF, ELSE, DO, WHILE, INT, FLOAT, BOOLEAN, LOG;
 
 }
