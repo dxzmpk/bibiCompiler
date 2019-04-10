@@ -63,4 +63,9 @@ public interface DfaInterface {
 
     public void errorHandler(FileProcessor fileProcessor);
 
+    /**
+     * 处理空格情况，结束当前字符的识别
+     */
+    public void spaceHandler();
+
 }

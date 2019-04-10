@@ -1,9 +1,8 @@
 package test.lexicalPraser;
 
 import lexicalPraser.implement.FileProcessor;
+import org.junit.Test;
 import test.BaseTest;
-import org.junit.jupiter.api.Test;
-
 import java.io.IOException;
 import java.util.logging.FileHandler;
 import java.util.logging.Logger;

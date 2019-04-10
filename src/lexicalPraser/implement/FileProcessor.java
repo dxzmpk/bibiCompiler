@@ -36,6 +36,8 @@ public class FileProcessor implements FileProcessorInterface {
             } else {
                 pushbackReader.close();
                 System.err.print("到达文档末尾，词法分析完成");
+                //$代表文档末尾
+                c = '$';
             }
         } catch (IOException ioException){
             ioException.printStackTrace();

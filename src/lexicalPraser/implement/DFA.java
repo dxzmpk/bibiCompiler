@@ -84,29 +84,34 @@ public class DFA implements DfaInterface {
         StringBuilder value = new StringBuilder();
         while(true){
             switch (state) {
-            case 9:
-            	c = fileProcessor.getNextCharacter();
-            	if(isLetter(c) ) {
-            	    value.append(c);
-            	    state = 10;
+                case 9: {
+                    c = fileProcessor.getNextCharacter();
+                    if(isLetter(c) ) {
+                        value.append(c);
+                        state = 10;
+                        break;
+                    }
+                    else fail(fileProcessor);
                 }
-            	else fail(fileProcessor);
-            	break;
-            case 10:
-            	c = fileProcessor.getNextCharacter();
-            	if(isLetter(c) || isDigit (c)) {
-                    value.append(c);
-            	    state = 10;
+                case 10: {
+                    c = fileProcessor.getNextCharacter();
+                    if(isLetter(c) || isDigit (c)) {
+                        value.append(c);
+                        state = 10;
+                    }
+                    else state = 11;
+                    break;
                 }
-            	else state = 11;
-            	break;
-            case 11:
-                if(KeyWordItems.isKeyWord(value.toString())){
-                    tokenItem.setLexicalName(LexicalNames.valueOf(value.toString()));
-                } else {
-                    tokenItem.setValue(value.toString());
+
+                case 11:{
+                    if(KeyWordItems.isKeyWord(value.toString())){
+                        tokenItem.setLexicalName(LexicalNames.valueOf(value.toString()));
+                        return tokenItem;
+                    } else {
+                        tokenItem.setValue(value.toString());
+                        return tokenItem;
+                    }
                 }
-                return tokenItem;
             }
         }
     }
@@ -294,6 +299,10 @@ public class DFA implements DfaInterface {
 
     @Override
     public void errorHandler(FileProcessor fileProcessor) {
+    }
+
+    @Override
+    public void spaceHandler() {
 
     }
 }
