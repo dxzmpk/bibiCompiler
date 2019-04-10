@@ -19,7 +19,8 @@ public class FileProcessor implements FileProcessorInterface {
     public FileProcessor(String filename) {
         try {
             reader = new FileReader(filename);
-            pushbackReader = new PushbackReader(reader);
+            //pushBackReader每次最多可以push回一个字符，之后只能读取
+            pushbackReader = new PushbackReader(reader,1);
         } catch (IOException ioException){
             ioException.printStackTrace();
         }
@@ -46,7 +47,7 @@ public class FileProcessor implements FileProcessorInterface {
     @Override
     public void pushBackLastCharacter() {
         try {
-            pushbackReader.unread('c');
+            pushbackReader.unread(c);
         } catch (IOException ioException){
             ioException.printStackTrace();
         }
