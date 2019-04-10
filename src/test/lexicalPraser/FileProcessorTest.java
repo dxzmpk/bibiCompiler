@@ -17,7 +17,7 @@ public class FileProcessorTest extends BaseTest {
                 new FileProcessor("src/test/lexicalPraser/file/file_processor.txt");
         char c = fileProcessor.getNextCharacter();
         String result = "" + c;
-        LOGGER.info(result);
+        System.out.println(result);
     }
 
     @Test
@@ -29,6 +29,6 @@ public class FileProcessorTest extends BaseTest {
         char c2 = fileProcessor.getNextCharacter();
         fileProcessor.pushBackLastCharacter();
         char c3 = fileProcessor.getNextCharacter();
-        LOGGER.info("字符依次为 ：" + c + " " + c1 + " " + c2 + " " + c3);
+        System.out.println("字符依次为 ：" + c + " " + c1 + " " + c2 + " " + c3);
     }
 }

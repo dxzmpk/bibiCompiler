@@ -29,4 +29,11 @@ public class TokenItem {
         this.value = value;
     }
 
+    @Override
+    public String toString() {
+        return "TokenItem{" +
+                "lexicalName=" + lexicalName +
+                ", value='" + value + '\'' +
+                '}';
+    }
 }
