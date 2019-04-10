@@ -2,23 +2,53 @@ package lexicalPraser.implement;
 
 import lexicalPraser.interfaces.FileProcessorInterface;
 
-import java.io.File;
+import java.io.*;
 
 public class FileProcessor implements FileProcessorInterface {
 
-    File file ;
+    private static Reader reader;
 
+    private static char c;
+
+    private static PushbackReader pushbackReader ;
+
+    /**
+     * 构造方法，新建pushbackReader
+     * @param filename
+     */
     public FileProcessor(String filename) {
-        this.file = new File(filename);
+        try {
+            reader = new FileReader(filename);
+            pushbackReader = new PushbackReader(reader);
+        } catch (IOException ioException){
+            ioException.printStackTrace();
+        }
+
     }
 
     @Override
-    public Character getNextCharacter() {
-        return null;
+    public Character getNextCharacter()
+    {
+        try {
+            int readInt = pushbackReader.read();
+            if(readInt != -1){
+                c = (char) readInt;
+            } else {
+                pushbackReader.close();
+                System.err.print("到达文档末尾，词法分析完成");
+            }
+        } catch (IOException ioException){
+            ioException.printStackTrace();
+        }
+        return c;
     }
 
     @Override
-    public boolean pushBackLastCharacter() {
-        return false;
+    public void pushBackLastCharacter() {
+        try {
+            pushbackReader.unread('c');
+        } catch (IOException ioException){
+            ioException.printStackTrace();
+        }
     }
 }

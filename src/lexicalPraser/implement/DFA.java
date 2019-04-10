@@ -22,7 +22,7 @@ public class DFA implements DfaInterface {
     public TokenItem getRelop(FileProcessor fileProcessor) {
         TokenItem tokenItem = new TokenItem(LexicalNames.RELOP);
         int state = 0;
-        char c;
+        char c ;
         while(true){
             switch (state) {
                 case 0:

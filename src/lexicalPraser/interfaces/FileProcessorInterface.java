@@ -12,6 +12,6 @@ public interface FileProcessorInterface {
      * 将最后一个未匹配字符推回输入流
      * @return 成功返回true 失败返回false
      */
-    public boolean pushBackLastCharacter();
+    public void pushBackLastCharacter();
 
 }
