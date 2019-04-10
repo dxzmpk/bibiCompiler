@@ -1,1 +1,10 @@
-int main() test
+int main(){
+    float a = 1.001;
+    if(a > 1) {
+        a = a + 1;
+    }
+    do{
+        a = a * 2;
+    } while (a < 10);
+    return 1;
+}
