@@ -1,4 +1,4 @@
-package lexicalPraser.test;
+package test.lexicalPraser;
 
 public class PraserTest {
 }

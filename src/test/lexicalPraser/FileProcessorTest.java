@@ -1,20 +1,20 @@
-package lexicalPraser.test;
+package test.lexicalPraser;
 
 import lexicalPraser.implement.FileProcessor;
+import test.BaseTest;
 import org.junit.jupiter.api.Test;
 
-import java.util.logging.Level;
+import java.io.IOException;
+import java.util.logging.FileHandler;
 import java.util.logging.Logger;
 
 public class FileProcessorTest extends BaseTest {
-
-    private static final Logger LOGGER = Logger.getLogger(FileProcessorTest.class.getName());
 
 
     @Test
     public void getNextCharacterTest(){
         FileProcessor fileProcessor =
-                new FileProcessor("src/lexicalPraser/test/file_processor.txt");
+                new FileProcessor("src/test/lexicalPraser/file/file_processor.txt");
         char c = fileProcessor.getNextCharacter();
         String result = "" + c;
         LOGGER.info(result);
@@ -23,7 +23,7 @@ public class FileProcessorTest extends BaseTest {
     @Test
     public void pushBackLastCharacter(){
         FileProcessor fileProcessor =
-                new FileProcessor("src/lexicalPraser/test/file_processor.txt");
+                new FileProcessor("src/test/lexicalPraser/file/file_processor.txt");
         char c = fileProcessor.getNextCharacter();
         char c1 = fileProcessor.getNextCharacter();
         char c2 = fileProcessor.getNextCharacter();
