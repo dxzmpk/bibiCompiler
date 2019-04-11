@@ -12,7 +12,7 @@ public interface DfaInterface {
      * @param fileProcessor
      * @return List<TokenItem>
      */
-    public List<TokenItem> getTokenFromSentence(FileProcessorInterface fileProcessor);
+    public List<TokenItem> getTokenFromSentence(FileProcessor fileProcessor);
 
     /**
      * 识别大于小于运算符
@@ -27,6 +27,20 @@ public interface DfaInterface {
      * @return
      */
     public TokenItem getIdentiFier(FileProcessor fileProcessor);
+
+    /**
+     * 识别定界符
+     * @param fileProcessor
+     * @return
+     */
+    public TokenItem getSymbol(FileProcessor fileProcessor);
+
+    /**
+     * 识别定界符
+     * @param fileProcessor
+     * @return
+     */
+    public TokenItem getOperator(FileProcessor fileProcessor);
 
     /**
      * 识别关键字note
@@ -67,5 +81,23 @@ public interface DfaInterface {
      * 处理空格情况，结束当前字符的识别
      */
     public void spaceHandler();
+
+    /**
+     * 判断下一个字符是否为比较运算符
+     * @param c
+     */
+    public boolean isRelop(char c);
+
+    /**
+     * 判断下一个字符是否为算术运算符
+     * @param c
+     */
+    public boolean isOperator(char c);
+
+    /**
+     * 判断下一个字符是否为定界符
+     * @param c
+     */
+    public boolean isSymbol(char c);
 
 }

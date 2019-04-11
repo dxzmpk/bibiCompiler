@@ -5,6 +5,7 @@ import lexicalPraser.interfaces.FileProcessorInterface;
 import lexicalPraser.model.LexicalNames;
 import lexicalPraser.model.TokenItem;
 
+import java.util.ArrayList;
 import java.util.List;
 /**
  * 
@@ -14,8 +15,39 @@ import java.util.List;
 public class DFA implements DfaInterface {
 
     @Override
-    public List<TokenItem> getTokenFromSentence(FileProcessorInterface fileProcessor) {
-        return null;
+    public List<TokenItem> getTokenFromSentence(FileProcessor fileProcessor) {
+        List<TokenItem> tokenItemList = new ArrayList<>();
+        char nextChar = ' ';
+        TokenItem tokenItem;
+        while (nextChar != '$'){
+            nextChar = fileProcessor.getNextCharacter();
+            if(isRelop(nextChar)){
+                fileProcessor.pushBackLastCharacter();
+                tokenItem = getRelop(fileProcessor);
+                tokenItemList.add(tokenItem);
+            } else if(isDigit(nextChar)){
+                fileProcessor.pushBackLastCharacter();
+                tokenItem = getDigitalNumber(fileProcessor);
+                tokenItemList.add(tokenItem);
+            } else if(isLetter(nextChar)){
+                fileProcessor.pushBackLastCharacter();
+                tokenItem = getIdentiFier(fileProcessor);
+                tokenItemList.add(tokenItem);
+            } else if(isOperator(nextChar)){
+                fileProcessor.pushBackLastCharacter();
+                tokenItem = getOperator(fileProcessor);
+                tokenItemList.add(tokenItem);
+            } else if(isSymbol(nextChar)){
+                fileProcessor.pushBackLastCharacter();
+                tokenItem = getSymbol(fileProcessor);
+                tokenItemList.add(tokenItem);
+            } else if(nextChar == ' ' || nextChar == '\n' || nextChar == '\r'||nextChar == '$'){
+                //continue but unnecessary;
+            } else {
+                System.out.println("非法字符" + nextChar);
+            }
+        }
+        return tokenItemList;
     }
 
     @Override
@@ -104,8 +136,9 @@ public class DFA implements DfaInterface {
                 }
 
                 case 11:{
-                    if(KeyWordItems.isKeyWord(value.toString())){
-                        tokenItem.setLexicalName(LexicalNames.valueOf(value.toString()));
+                    fileProcessor.pushBackLastCharacter();
+                    if(KeyWordItems.isKeyWord(value.toString().toUpperCase())){
+                        tokenItem.setLexicalName(LexicalNames.valueOf(value.toString().toUpperCase()));
                         return tokenItem;
                     } else {
                         tokenItem.setValue(value.toString());
@@ -212,6 +245,24 @@ public class DFA implements DfaInterface {
     }
 
     @Override
+    public TokenItem getSymbol(FileProcessor fileProcessor) {
+        char symbol = fileProcessor.getNextCharacter();
+        TokenItem tokenItem = new TokenItem(LexicalNames.SYMBOL);
+        String string = "" + symbol;
+        tokenItem.setValue(string);
+        return tokenItem;
+    }
+
+    @Override
+    public TokenItem getOperator(FileProcessor fileProcessor) {
+        char symbol = fileProcessor.getNextCharacter();
+        TokenItem tokenItem = new TokenItem(LexicalNames.OPERATOR);
+        String string = "" + symbol;
+        tokenItem.setValue(string);
+        return tokenItem;
+    }
+
+    @Override
     public TokenItem getNote(FileProcessor fileProcessor) {
     	TokenItem tokenItem = new TokenItem(LexicalNames.NOTE);
         int state =22;
@@ -304,5 +355,20 @@ public class DFA implements DfaInterface {
     @Override
     public void spaceHandler() {
 
+    }
+
+    @Override
+    public boolean isRelop(char c) {
+        return (c == '>' || c == '<' || c == '=');
+    }
+
+    @Override
+    public boolean isOperator(char c) {
+        return (c == '+' || c == '-' || c == '*' || c == '/');
+    }
+
+    @Override
+    public boolean isSymbol(char c) {
+        return (c == '{'|| c == '}' || c == '(' || c == ')' || c == ';' );
     }
 }
