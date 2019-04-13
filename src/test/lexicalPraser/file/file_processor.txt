@@ -1,5 +1,5 @@
 int main(){
-    float a = 1.001;
+    static float a = 1.001;
     if(a > 1) {
         a = a + 1;
     }
