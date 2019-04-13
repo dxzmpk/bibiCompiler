@@ -7,9 +7,19 @@ import lexicalPraser.model.TokenItem;
 import org.junit.Test;
 import test.BaseTest;
 
+import java.util.List;
+
 public class DfaTest extends BaseTest {
 
     DfaInterface dfa = new DFA();
+
+    @Test
+    public void getTokenFromSentenceTest(){
+        FileProcessor fileProcessor =
+                new FileProcessor("src/test/lexicalPraser/file/file_processor.txt");
+        List<TokenItem> tokenItems = dfa.getTokenFromSentence(fileProcessor);
+        System.out.println(tokenItems.toString());
+    }
 
     @Test
     public void getRelopTest(){
