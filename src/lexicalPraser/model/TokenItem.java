@@ -2,6 +2,8 @@ package lexicalPraser.model;
 
 public class TokenItem {
 
+    public String initialWord;
+
     LexicalNames lexicalName;
 
     String value;
@@ -11,6 +13,14 @@ public class TokenItem {
     }
 
     public TokenItem() {
+    }
+
+    public String getInitialWord() {
+        return initialWord;
+    }
+
+    public void setInitialWord(String initialWord) {
+        this.initialWord = initialWord;
     }
 
     public LexicalNames getLexicalName() {

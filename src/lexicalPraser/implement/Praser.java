@@ -15,8 +15,8 @@ public class Praser implements ParserInterface {
                 new FileProcessor(inputFileName);
         List<TokenItem> tokenItems = dfa.getTokenFromSentence(fileProcessor);
         for (TokenItem tokenItem : tokenItems) {
-            String value = tokenItem.getValue() == null ? "" :   "," + "\t tokenValue: " + tokenItem.getValue();
-            System.out.println("tokenName: " + tokenItem.getLexicalName() + value );
+            String value =  tokenItem.getValue() == null ? " _ " :   tokenItem.getValue();
+            System.out.println(tokenItem.getInitialWord() + "\t" + "<" + tokenItem.getLexicalName() + ", " + value + ">");
         }
     }
 
