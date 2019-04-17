@@ -18,6 +18,7 @@ public class DFA implements DfaInterface {
     public List<TokenItem> getTokenFromSentence(FileProcessor fileProcessor) {
         List<TokenItem> tokenItemList = new ArrayList<>();
         char nextChar = ' ';
+        int lineNum = 1;
         TokenItem tokenItem;
         while (nextChar != '$'){
             nextChar = fileProcessor.getNextCharacter();
@@ -33,6 +34,10 @@ public class DFA implements DfaInterface {
                 fileProcessor.pushBackLastCharacter();
                 tokenItem = getIdentiFier(fileProcessor);
                 tokenItemList.add(tokenItem);
+            } else if(nextChar == '/'){
+                fileProcessor.pushBackLastCharacter();
+                tokenItem = getNote(fileProcessor);
+                tokenItemList.add(tokenItem);
             } else if(isOperator(nextChar)){
                 fileProcessor.pushBackLastCharacter();
                 tokenItem = getOperator(fileProcessor);
@@ -41,10 +46,12 @@ public class DFA implements DfaInterface {
                 fileProcessor.pushBackLastCharacter();
                 tokenItem = getSymbol(fileProcessor);
                 tokenItemList.add(tokenItem);
-            } else if(nextChar == ' ' || nextChar == '\n' || nextChar == '\r'||nextChar == '$'){
+            } else if(nextChar == ' ' || nextChar == '\n'||nextChar == '$'){
                 //continue but unnecessary;
+            } else if(nextChar == '\r'){
+                lineNum ++;
             } else {
-                System.out.println( "非法字符" + nextChar);
+                System.out.println( "非法字符" + nextChar + "出现在第" + lineNum + "行" );
             }
         }
         return tokenItemList;
@@ -261,9 +268,9 @@ public class DFA implements DfaInterface {
     public TokenItem getSymbol(FileProcessor fileProcessor) {
         char symbol = fileProcessor.getNextCharacter();
         TokenItem tokenItem = new TokenItem(LexicalNames.SYMBOL);
-        String string = "" + symbol;
+        String string = "" + (int)symbol;
         tokenItem.setValue(string);
-        tokenItem.setInitialWord(string);
+        tokenItem.setInitialWord("" + symbol);
         return tokenItem;
     }
 
@@ -371,7 +378,6 @@ public class DFA implements DfaInterface {
 
     @Override
     public void spaceHandler() {
-
     }
 
     @Override
