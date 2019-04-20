@@ -12,6 +12,27 @@ public class FormulaItem {
 
     private char foreSee;
 
+    public FormulaItem(int pointAlign, char head, String reap, char[] first, char foreSee) {
+        this.pointAlign = pointAlign;
+        this.head = head;
+        this.reap = reap;
+        this.first = first;
+        this.foreSee = foreSee;
+    }
+
+    public FormulaItem(String line){
+
+    }
+
+    public boolean hasNext(){
+        if(pointAlign == reap.length() ) return false;
+        else return true;
+    }
+
+    public FormulaItem nextFormula(){
+        return new FormulaItem(pointAlign+1, head, reap, first, foreSee);
+    }
+
     public int getPointAlign() {
         return pointAlign;
     }
