@@ -1,10 +1,12 @@
 package syntacticAnalyzer.model;
 
+import java.util.Arrays;
+
 public class FormulaItem {
 
     private int pointAlign;
 
-    private char head;
+    private String head;
 
     private String reap;
 
@@ -12,12 +14,18 @@ public class FormulaItem {
 
     private char foreSee;
 
-    public FormulaItem(int pointAlign, char head, String reap, char[] first, char foreSee) {
+    public FormulaItem(int pointAlign, String head, String reap, char[] first, char foreSee) {
         this.pointAlign = pointAlign;
         this.head = head;
         this.reap = reap;
         this.first = first;
         this.foreSee = foreSee;
+    }
+
+    public FormulaItem(int pointAlign, String head, String reap) {
+        this.pointAlign = pointAlign;
+        this.head = head;
+        this.reap = reap;
     }
 
     public FormulaItem(String line){
@@ -41,11 +49,11 @@ public class FormulaItem {
         this.pointAlign = pointAlign;
     }
 
-    public char getHead() {
+    public String getHead() {
         return head;
     }
 
-    public void setHead(char head) {
+    public void setHead(String head) {
         this.head = head;
     }
 
@@ -71,5 +79,16 @@ public class FormulaItem {
 
     public void setForeSee(char foreSee) {
         this.foreSee = foreSee;
+    }
+
+    @Override
+    public String toString() {
+        return "FormulaItem{" +
+                "pointAlign=" + pointAlign +
+                ", head='" + head + '\'' +
+                ", reap='" + reap + '\'' +
+                ", first=" + Arrays.toString(first) +
+                ", foreSee=" + foreSee +
+                '}';
     }
 }

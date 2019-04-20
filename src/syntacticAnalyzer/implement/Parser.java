@@ -13,9 +13,7 @@ import java.util.HashMap;
 public class Parser {
 	
 	
-	private DefaultTableModel tbmodel_lex_result;
-	private DefaultTableModel tbmodel_lex_error;
-	
+
 	public static void main(String[] args) {
 		Parser parser = new Parser();
 		parser.parseByFile("src/grammerParser/file/sample.txt");
@@ -47,7 +45,7 @@ public class Parser {
 		}
 		else {
 			// 句法分析
-			TextProcessor textParse = new TextProcessor(lex_result_stack, tbmodel_lex_error);
+			TextProcessor textParse = new TextProcessor(lex_result_stack, null);
 			textParse.Parsing();
 		}
 	}

@@ -12,6 +12,7 @@ public class Analyzer implements AnalyzerInterface {
 
     @Override
     public Closure getClosure(Closure initialClosure) {
+
         return null;
     }
 

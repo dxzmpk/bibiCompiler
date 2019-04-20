@@ -1,10 +1,10 @@
-package grammerParser;
+package syntacticAnalyzer.implement;
 
 import java.util.ArrayList;
 
 
 // 产生式类
-public class Production{
+public class Production {
 	String left;
 	String[] right;
 	ArrayList<String> select = new ArrayList<String>();

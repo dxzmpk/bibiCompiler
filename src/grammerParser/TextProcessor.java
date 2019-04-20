@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.RandomAccessFile;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 import javax.swing.table.DefaultTableModel;
 
@@ -30,6 +31,7 @@ public class TextProcessor {
 		String leftandinput;
 		String process="";
 		System.out.println("推导过程");
+		List<String> results = new ArrayList<>();
 		while (deduce_str.size()>0 && input_cache.size()>0 ) {
 			
 			
@@ -57,7 +59,7 @@ public class TextProcessor {
 					process = process+deduce_str.get(i)+" ";
 				}
 				
-				System.out.println(process+deduce_str.get(deduce_str.size()-1)+" -> "+right);
+				results.add(process+deduce_str.get(deduce_str.size()-1)+" -> "+right);
 				// 删掉产生的字符，压入堆栈
 				deduce_str.remove(deduce_str.size()-1);
 				if(right.equals("$")){
@@ -82,6 +84,10 @@ public class TextProcessor {
 				tbmodel_lex_result.addRow(new String[]{process, "ERROR!  无法识别的字符"+input_cache.get(0)+"产生式"+leftandinput});
 				input_cache.remove(0);
 			}
+		}
+
+		for(int i =results.size() - 1; i >= 0; i-- ){
+			System.out.println(results.get(i));
 		}
 	}
 	
