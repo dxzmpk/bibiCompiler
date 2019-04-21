@@ -14,7 +14,6 @@ public class LR1Parser {
 	private static final Logger logger = Main.getLogger(LR1Parser.class);
 	private final LR1 lr1;
 
-	@SuppressWarnings("serial")
 	public static class ParseException extends Exception {
 		public ParseException(String string) {
 			super(string);
@@ -44,90 +43,63 @@ public class LR1Parser {
 		this.lr1 = lr1;
 	}
 
-	/**
-	 * Validate a list of tokens against the LR1
-	 *
-	 * @param tokens the list of tokens to be validated
-	 * @return whether the list of tokens is valid
-	 */
-	public ParseTree parseTokens(List<Token> tokens) throws Exception {
-		// Initialize startSymbol, tokens iterator and parsing stack
+	public Process parseTokens(List<Token> tokens) throws Exception {
 		String startSymbol = lr1.getStartSymbol();
 		ListIterator<Token> tokensIterator = tokens.listIterator();
 		Stack<TransitionState> parseStack = new Stack<TransitionState>();
 		parseStack.push(new TransitionState(null, 0));
 
-		Stack<ParseTree.Node> nodeStack = new Stack<ParseTree.Node>();
+		Stack<Process.Node> processStack = new Stack<Process.Node>();
 
-		// Initialize parsing state variables
 		Token nextToken = tokensIterator.next();
 		LR1.Action nextAction = null;
-
-		// Execute lr1 parsing until the tokens has been reduced to the startSymbol
 		while (!nextToken.getKind().equals(startSymbol)) {
 
-			// Acquire next action, according to the current state and the next token kind
 			nextAction = lr1.actionFor(parseStack.peek().getState(), nextToken.getKind());
-			logger.finer("Next:\tState " + parseStack.peek().getState() + " + " + nextToken + " => " + nextAction);
 
-			// If is a shift
 			if (nextAction instanceof LR1.ActionShift) {
 				LR1.ActionShift shift = (LR1.ActionShift) nextAction;
-				logger.fine("" + shift);
-
-				// Push the transitionState to the stack
 				TransitionState transitionState = new TransitionState(nextToken, shift.getToState());
 				parseStack.push(transitionState);
-				logger.finer("├─ Push:\t" + transitionState);
-
-				// Push token as leaf node if it is a terminal symbol
 				if(lr1.isTerminalSymbol(nextToken.getKind())) {
-					nodeStack.push(new ParseTree.LeafNode(nextToken));
+					processStack.push(new Process.LeafNode(nextToken));
 				}
-
-				// Iterate to next token
-				// Note: if there is no next, move cursor back to front first
+				// 遍历到下一个token
 				if(!tokensIterator.hasNext()) tokensIterator = tokens.listIterator();
 				nextToken = tokensIterator.next();
 			}
-			// If is a reduction
 			else if (nextAction instanceof LR1.ActionReduce){
 				LR1.ActionReduce reduce = (LR1.ActionReduce) nextAction;
 				logger.fine("" + reduce);
 
-				List<ParseTree.Node> poppedNodes = new LinkedList<ParseTree.Node>();
+				List<Process.Node> poppedNodes = new LinkedList<Process.Node>();
 
 				// Pop the stack according to the length of the production rule's RHS
 				for (int i = 0; i < reduce.getInt(); i++) {
 					TransitionState poppedState = parseStack.pop();
-					logger.finer("├─ Pop:\t" + poppedState);
-					poppedNodes.add(0, nodeStack.pop());
+					poppedNodes.add(0, processStack.pop());
 				}
 
 				// Push the production rule as a tree node
-				ParseTree.Node treeNode = new ParseTree.TreeNode(reduce.getProductionRule(), poppedNodes);
-				nodeStack.push(treeNode);
+				Process.Node treeNode = new Process.TreeNode(reduce.getProductionRule(), poppedNodes);
+				processStack.push(treeNode);
 
-				// Iterate back one token, since it has not been pushed to the stack
+				// 遍历到前一个token
 				tokensIterator.previous();
 
-				// Next token is the production rule's LHS
 				nextToken = new Token(reduce.getProductionRule().getLefthand(), Arrays.toString(reduce.getProductionRule().getRighthand()));
 			}
-			// No action found, validation failed
 			else {
 				String nodeStackTrace = "";
-				for(ParseTree.Node root: nodeStack) nodeStackTrace += root.toString(0);
-				logger.severe("ERROR: No valid action for State " + parseStack.peek().getState() + " + " + nextToken + "\n" + nodeStackTrace);
-				throw new ParseException("ERROR: No valid action found during parsing");
+				for(Process.Node root: processStack) nodeStackTrace += root.toString(0);
+				logger.severe("ERROR! 此状态没有对应的ACTION分析表动作！ " + parseStack.peek().getState() + " + " + nextToken + "\n" + nodeStackTrace);
+				throw new ParseException("ERROR！句法分析发生错误！");
 			}
 		}
 
-		// The tokens has been reduced to startSymbol, validation succeed
-		logger.info("Tokens has been validated against LR1");
 
-		assert nodeStack.size() == 1 : "Node stack has more than one node";
-		ParseTree parseTree = new ParseTree(nodeStack.pop());
+		assert processStack.size() == 1 : "ERROR!  无法识别的字符！ ";
+		Process parseTree = new Process(processStack.pop());
 		return parseTree;
 	}
 }

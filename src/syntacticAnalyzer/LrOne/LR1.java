@@ -165,14 +165,6 @@ public class LR1 {
 
 	public abstract class Action{
 
-		/**
-		 * A generic method for all actions.
-		 *
-		 * If is ReduceAction, return the length of the production rule's RHS.
-		 * If is ShiftAction, return the id of next state
-		 *
-		 * @return An int that has different meaning for different action
-		 */
 		abstract public int getInt();
 	}
 
@@ -186,9 +178,6 @@ public class LR1 {
 			return this.productionRule;
 		}
 
-		/* (non-Javadoc)
-		 * @see ca.uwaterloo.joos.TransitionTable.Action#getInt()
-		 */
 		@Override
 		public int getInt(){
 			//Returns the number of symbols to pop off the stack.
@@ -212,9 +201,6 @@ public class LR1 {
 			return this.toState;
 		}
 
-		/* (non-Javadoc)
-		 * @see ca.uwaterloo.joos.TransitionTable.Action#getInt()
-		 */
 		@Override
 		public int getInt() {
 			return this.toState;

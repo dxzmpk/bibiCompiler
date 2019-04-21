@@ -20,6 +20,9 @@ public class Parser {
 	}
 	
 	public void parseByFile(String fileName1) {
+		FileProcessor fileProcessor = new FileProcessor("src/grammerParser/file/grammar.txt");
+		FileProcessor fileProcessor1 = new FileProcessor("src/syntacticAnalyzer/file/goto.txt");
+		fileProcessor.getNextLine();
 		StringBuilder ta_input  = new StringBuilder();
 		File file = new File(fileName1);
 		try{

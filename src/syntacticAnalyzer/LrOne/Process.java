@@ -5,7 +5,7 @@ package syntacticAnalyzer.LrOne;
 
 import java.util.List;
 
-public class ParseTree {
+public class Process {
 
 	public interface Node {
 		public String toString(int level);
@@ -76,12 +76,12 @@ public class ParseTree {
 	/**
 	 *
 	 */
-	public ParseTree(Node root) {
+	public Process(Node root) {
 		this.root = root;
 	}
 
 	@Override
 	public String toString() {
-		return "<ParseTree>\n" + this.root.toString(0);
+		return "<Process>\n" + this.root.toString(0);
 	}
 }

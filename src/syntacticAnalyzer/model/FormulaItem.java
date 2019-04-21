@@ -6,6 +6,8 @@ public class FormulaItem {
 
     private int pointAlign;
 
+    char c;
+
     private String head;
 
     private String reap;
@@ -32,9 +34,9 @@ public class FormulaItem {
 
     }
 
-    public boolean hasNext(){
-        if(pointAlign == reap.length() ) return false;
-        else return true;
+    public char hasNext(){
+        if(pointAlign == reap.length() ) return '#';
+        else return c;
     }
 
     public FormulaItem nextFormula(){

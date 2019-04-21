@@ -1,0 +1,1037 @@
+	                {[S -> .function functions, $]}	0	{[S -> .function functions, $]; [function -> .type id ( args ) function_body, $/int/short/long/char/float/double/void/unsigned]; [type -> .int, id]; [type -> .short, id]; [type -> .long, id]; [type -> .char, id]; [type -> .float, id]; [type -> .double, id]; [type -> .void, id]; [type -> .unsigned type, id]}
+goto(0, function)	{[S -> function.functions, $]}	1	{[S -> function.functions, $]; [functions -> .function functions, $]; [functions -> .$, $]; [function -> .type id ( args ) function_body, $/int/short/long/char/float/double/void/unsigned]; [type -> .int, id]; [type -> .short, id]; [type -> .long, id]; [type -> .char, id]; [type -> .float, id]; [type -> .double, id]; [type -> .void, id]; [type -> .unsigned type, id]}
+goto(0, type)	{[function -> type.id ( args ) function_body, $/int/short/long/char/float/double/void/unsigned]}	2	{[function -> type.id ( args ) function_body, $/int/short/long/char/float/double/void/unsigned]}
+goto(0, int)	{[type -> int., id]}	3	{[type -> int., id]}
+goto(0, short)	{[type -> short., id]}	4	{[type -> short., id]}
+goto(0, long)	{[type -> long., id]}	5	{[type -> long., id]}
+goto(0, char)	{[type -> char., id]}	6	{[type -> char., id]}
+goto(0, float)	{[type -> float., id]}	7	{[type -> float., id]}
+goto(0, double)	{[type -> double., id]}	8	{[type -> double., id]}
+goto(0, void)	{[type -> void., id]}	9	{[type -> void., id]}
+goto(0, unsigned)	{[type -> unsigned.type, id]}	10	{[type -> unsigned.type, id]; [type -> .int, id]; [type -> .short, id]; [type -> .long, id]; [type -> .char, id]; [type -> .float, id]; [type -> .double, id]; [type -> .void, id]; [type -> .unsigned type, id]}
+goto(1, functions)	{[S -> function functions., $]}	11	{[S -> function functions., $]}
+goto(1, function)	{[functions -> function.functions, $]}	12	{[functions -> function.functions, $]; [functions -> .function functions, $]; [functions -> .$, $]; [function -> .type id ( args ) function_body, $/int/short/long/char/float/double/void/unsigned]; [type -> .int, id]; [type -> .short, id]; [type -> .long, id]; [type -> .char, id]; [type -> .float, id]; [type -> .double, id]; [type -> .void, id]; [type -> .unsigned type, id]}
+goto(1, $)	{[functions -> $., $]}	13	{[functions -> $., $]}
+goto(1, type)	{[function -> type.id ( args ) function_body, $/int/short/long/char/float/double/void/unsigned]}	2	 
+goto(1, int)	{[type -> int., id]}	3	 
+goto(1, short)	{[type -> short., id]}	4	 
+goto(1, long)	{[type -> long., id]}	5	 
+goto(1, char)	{[type -> char., id]}	6	 
+goto(1, float)	{[type -> float., id]}	7	 
+goto(1, double)	{[type -> double., id]}	8	 
+goto(1, void)	{[type -> void., id]}	9	 
+goto(1, unsigned)	{[type -> unsigned.type, id]}	10	 
+goto(2, id)	{[function -> type id.( args ) function_body, $/int/short/long/char/float/double/void/unsigned]}	14	{[function -> type id.( args ) function_body, $/int/short/long/char/float/double/void/unsigned]}
+goto(10, type)	{[type -> unsigned type., id]}	15	{[type -> unsigned type., id]}
+goto(10, int)	{[type -> int., id]}	3	 
+goto(10, short)	{[type -> short., id]}	4	 
+goto(10, long)	{[type -> long., id]}	5	 
+goto(10, char)	{[type -> char., id]}	6	 
+goto(10, float)	{[type -> float., id]}	7	 
+goto(10, double)	{[type -> double., id]}	8	 
+goto(10, void)	{[type -> void., id]}	9	 
+goto(10, unsigned)	{[type -> unsigned.type, id]}	10	 
+goto(12, functions)	{[functions -> function functions., $]}	16	{[functions -> function functions., $]}
+goto(12, function)	{[functions -> function.functions, $]}	12	 
+goto(12, $)	{[functions -> $., $]}	13	 
+goto(12, type)	{[function -> type.id ( args ) function_body, $/int/short/long/char/float/double/void/unsigned]}	2	 
+goto(12, int)	{[type -> int., id]}	3	 
+goto(12, short)	{[type -> short., id]}	4	 
+goto(12, long)	{[type -> long., id]}	5	 
+goto(12, char)	{[type -> char., id]}	6	 
+goto(12, float)	{[type -> float., id]}	7	 
+goto(12, double)	{[type -> double., id]}	8	 
+goto(12, void)	{[type -> void., id]}	9	 
+goto(12, unsigned)	{[type -> unsigned.type, id]}	10	 
+goto(14, ()	{[function -> type id (.args ) function_body, $/int/short/long/char/float/double/void/unsigned]}	17	{[function -> type id (.args ) function_body, $/int/short/long/char/float/double/void/unsigned]; [args -> .type id arg, )]; [args -> .$, )]; [type -> .int, id]; [type -> .short, id]; [type -> .long, id]; [type -> .char, id]; [type -> .float, id]; [type -> .double, id]; [type -> .void, id]; [type -> .unsigned type, id]}
+goto(17, args)	{[function -> type id ( args.) function_body, $/int/short/long/char/float/double/void/unsigned]}	18	{[function -> type id ( args.) function_body, $/int/short/long/char/float/double/void/unsigned]}
+goto(17, type)	{[args -> type.id arg, )]}	19	{[args -> type.id arg, )]}
+goto(17, $)	{[args -> $., )]}	20	{[args -> $., )]}
+goto(17, int)	{[type -> int., id]}	3	 
+goto(17, short)	{[type -> short., id]}	4	 
+goto(17, long)	{[type -> long., id]}	5	 
+goto(17, char)	{[type -> char., id]}	6	 
+goto(17, float)	{[type -> float., id]}	7	 
+goto(17, double)	{[type -> double., id]}	8	 
+goto(17, void)	{[type -> void., id]}	9	 
+goto(17, unsigned)	{[type -> unsigned.type, id]}	10	 
+goto(18, ))	{[function -> type id ( args ).function_body, $/int/short/long/char/float/double/void/unsigned]}	21	{[function -> type id ( args ).function_body, $/int/short/long/char/float/double/void/unsigned]; [function_body -> .;, $/int/short/long/char/float/double/void/unsigned]; [function_body -> .block, $/int/short/long/char/float/double/void/unsigned]; [block -> .{ define_stmts stmts }, $/int/short/long/char/float/double/void/unsigned]}
+goto(19, id)	{[args -> type id.arg, )]}	22	{[args -> type id.arg, )]; [arg -> ., type id arg, )]; [arg -> .$, )]}
+goto(21, function_body)	{[function -> type id ( args ) function_body., $/int/short/long/char/float/double/void/unsigned]}	23	{[function -> type id ( args ) function_body., $/int/short/long/char/float/double/void/unsigned]}
+goto(21, ;)	{[function_body -> ;., $/int/short/long/char/float/double/void/unsigned]}	24	{[function_body -> ;., $/int/short/long/char/float/double/void/unsigned]}
+goto(21, block)	{[function_body -> block., $/int/short/long/char/float/double/void/unsigned]}	25	{[function_body -> block., $/int/short/long/char/float/double/void/unsigned]}
+goto(21, {)	{[block -> {.define_stmts stmts }, $/int/short/long/char/float/double/void/unsigned]}	26	{[block -> {.define_stmts stmts }, $/int/short/long/char/float/double/void/unsigned]; [define_stmts -> .define_stmt define_stmts, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [define_stmts -> .$, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [define_stmt -> .type id init vars ;, $/int/short/long/char/float/double/void/unsigned]; [type -> .int, id]; [type -> .short, id]; [type -> .long, id]; [type -> .char, id]; [type -> .float, id]; [type -> .double, id]; [type -> .void, id]; [type -> .unsigned type, id]}
+goto(22, arg)	{[args -> type id arg., )]}	27	{[args -> type id arg., )]}
+goto(22, ,)	{[arg -> ,.type id arg, )]}	28	{[arg -> ,.type id arg, )]; [type -> .int, id]; [type -> .short, id]; [type -> .long, id]; [type -> .char, id]; [type -> .float, id]; [type -> .double, id]; [type -> .void, id]; [type -> .unsigned type, id]}
+goto(22, $)	{[arg -> $., )]}	29	{[arg -> $., )]}
+goto(26, define_stmts)	{[block -> { define_stmts.stmts }, $/int/short/long/char/float/double/void/unsigned]}	30	{[block -> { define_stmts.stmts }, $/int/short/long/char/float/double/void/unsigned]; [stmts -> .stmt stmts, }]; [stmts -> .$, }]; [stmt -> .assign_stmt, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [stmt -> .jump_stmt, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [stmt -> .iteration_stmt, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [stmt -> .branch_stmt, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [assign_stmt -> .expression ;, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [jump_stmt -> .continue ;, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [jump_stmt -> .break ;, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [jump_stmt -> .return isnull_expr ;, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [iteration_stmt -> .while ( logical_expression ) block_stmt, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [iteration_stmt -> .for ( isnull_expr ; isnull_expr ; isnull_expr ) block_stmt, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [iteration_stmt -> .do block_stmt while ( logical_expression ) ;, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [branch_stmt -> .if ( logical_expression ) block_stmt result, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [branch_stmt -> .switch ( id ) { case_stmt case_stmts default_stmt }, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [expression -> .value operation, ;]; [value -> .item value', $/>/>=/ .factor item', +/-/$]; [factor -> .( value ), *///%/$]; [factor -> .id call_function, *///%/$]; [factor -> .const, *///%/$]; [const -> .num_const, *///%/$]; [const -> .FLOAT, *///%/$]; [const -> .CHAR, *///%/$]; [const -> .STR, *///%/$]; [num_const -> .INT10, *///%/$]; [num_const -> .INT8, *///%/$]; [num_const -> .INT16, *///%/$]}
+goto(26, define_stmt)	{[define_stmts -> define_stmt.define_stmts, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	31	{[define_stmts -> define_stmt.define_stmts, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [define_stmts -> .define_stmt define_stmts, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [define_stmts -> .$, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [define_stmt -> .type id init vars ;, $/int/short/long/char/float/double/void/unsigned]; [type -> .int, id]; [type -> .short, id]; [type -> .long, id]; [type -> .char, id]; [type -> .float, id]; [type -> .double, id]; [type -> .void, id]; [type -> .unsigned type, id]}
+goto(26, $)	{[define_stmts -> $., $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	32	{[define_stmts -> $., $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}
+goto(26, type)	{[define_stmt -> type.id init vars ;, $/int/short/long/char/float/double/void/unsigned]}	33	{[define_stmt -> type.id init vars ;, $/int/short/long/char/float/double/void/unsigned]}
+goto(26, int)	{[type -> int., id]}	3	 
+goto(26, short)	{[type -> short., id]}	4	 
+goto(26, long)	{[type -> long., id]}	5	 
+goto(26, char)	{[type -> char., id]}	6	 
+goto(26, float)	{[type -> float., id]}	7	 
+goto(26, double)	{[type -> double., id]}	8	 
+goto(26, void)	{[type -> void., id]}	9	 
+goto(26, unsigned)	{[type -> unsigned.type, id]}	10	 
+goto(28, type)	{[arg -> , type.id arg, )]}	34	{[arg -> , type.id arg, )]}
+goto(28, int)	{[type -> int., id]}	3	 
+goto(28, short)	{[type -> short., id]}	4	 
+goto(28, long)	{[type -> long., id]}	5	 
+goto(28, char)	{[type -> char., id]}	6	 
+goto(28, float)	{[type -> float., id]}	7	 
+goto(28, double)	{[type -> double., id]}	8	 
+goto(28, void)	{[type -> void., id]}	9	 
+goto(28, unsigned)	{[type -> unsigned.type, id]}	10	 
+goto(30, stmts)	{[block -> { define_stmts stmts.}, $/int/short/long/char/float/double/void/unsigned]}	35	{[block -> { define_stmts stmts.}, $/int/short/long/char/float/double/void/unsigned]}
+goto(30, stmt)	{[stmts -> stmt.stmts, }]}	36	{[stmts -> stmt.stmts, }]; [stmts -> .stmt stmts, }]; [stmts -> .$, }]; [stmt -> .assign_stmt, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [stmt -> .jump_stmt, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [stmt -> .iteration_stmt, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [stmt -> .branch_stmt, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [assign_stmt -> .expression ;, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [jump_stmt -> .continue ;, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [jump_stmt -> .break ;, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [jump_stmt -> .return isnull_expr ;, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [iteration_stmt -> .while ( logical_expression ) block_stmt, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [iteration_stmt -> .for ( isnull_expr ; isnull_expr ; isnull_expr ) block_stmt, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [iteration_stmt -> .do block_stmt while ( logical_expression ) ;, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [branch_stmt -> .if ( logical_expression ) block_stmt result, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [branch_stmt -> .switch ( id ) { case_stmt case_stmts default_stmt }, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [expression -> .value operation, ;]; [value -> .item value', $/>/>=/ .factor item', +/-/$]; [factor -> .( value ), *///%/$]; [factor -> .id call_function, *///%/$]; [factor -> .const, *///%/$]; [const -> .num_const, *///%/$]; [const -> .FLOAT, *///%/$]; [const -> .CHAR, *///%/$]; [const -> .STR, *///%/$]; [num_const -> .INT10, *///%/$]; [num_const -> .INT8, *///%/$]; [num_const -> .INT16, *///%/$]}
+goto(30, $)	{[stmts -> $., }]}	37	{[stmts -> $., }]}
+goto(30, assign_stmt)	{[stmt -> assign_stmt., $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	38	{[stmt -> assign_stmt., $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}
+goto(30, jump_stmt)	{[stmt -> jump_stmt., $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	39	{[stmt -> jump_stmt., $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}
+goto(30, iteration_stmt)	{[stmt -> iteration_stmt., $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	40	{[stmt -> iteration_stmt., $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}
+goto(30, branch_stmt)	{[stmt -> branch_stmt., $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	41	{[stmt -> branch_stmt., $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}
+goto(30, expression)	{[assign_stmt -> expression.;, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	42	{[assign_stmt -> expression.;, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}
+goto(30, continue)	{[jump_stmt -> continue.;, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	43	{[jump_stmt -> continue.;, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}
+goto(30, break)	{[jump_stmt -> break.;, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	44	{[jump_stmt -> break.;, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}
+goto(30, return)	{[jump_stmt -> return.isnull_expr ;, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	45	{[jump_stmt -> return.isnull_expr ;, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [isnull_expr -> .expression, ;]; [isnull_expr -> .$, ;]; [expression -> .value operation, ;]; [value -> .item value', $/>/>=/ .factor item', +/-/$]; [factor -> .( value ), *///%/$]; [factor -> .id call_function, *///%/$]; [factor -> .const, *///%/$]; [const -> .num_const, *///%/$]; [const -> .FLOAT, *///%/$]; [const -> .CHAR, *///%/$]; [const -> .STR, *///%/$]; [num_const -> .INT10, *///%/$]; [num_const -> .INT8, *///%/$]; [num_const -> .INT16, *///%/$]}
+goto(30, while)	{[iteration_stmt -> while.( logical_expression ) block_stmt, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	46	{[iteration_stmt -> while.( logical_expression ) block_stmt, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}
+goto(30, for)	{[iteration_stmt -> for.( isnull_expr ; isnull_expr ; isnull_expr ) block_stmt, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	47	{[iteration_stmt -> for.( isnull_expr ; isnull_expr ; isnull_expr ) block_stmt, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}
+goto(30, do)	{[iteration_stmt -> do.block_stmt while ( logical_expression ) ;, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	48	{[iteration_stmt -> do.block_stmt while ( logical_expression ) ;, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [block_stmt -> .{ stmts }, while]}
+goto(30, if)	{[branch_stmt -> if.( logical_expression ) block_stmt result, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	49	{[branch_stmt -> if.( logical_expression ) block_stmt result, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}
+goto(30, switch)	{[branch_stmt -> switch.( id ) { case_stmt case_stmts default_stmt }, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	50	{[branch_stmt -> switch.( id ) { case_stmt case_stmts default_stmt }, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}
+goto(30, value)	{[expression -> value.operation, ;]}	51	{[expression -> value.operation, ;]; [operation -> .compare_op value, ;]; [operation -> .equal_op value, ;]; [operation -> .$, ;]; [compare_op -> .>, (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [compare_op -> .>=, (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [compare_op -> .<, (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [compare_op -> .<=, (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [compare_op -> .==, (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [compare_op -> .!=, (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [equal_op -> .=, (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [equal_op -> .+=, (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [equal_op -> .-=, (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [equal_op -> .*=, (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [equal_op -> ./=, (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [equal_op -> .%=, (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}
+goto(30, item)	{[value -> item.value', $/>/>=/	52	{[value -> item.value', $/>/>=/ .+ item value', $/>/>=/ .- item value', $/>/>=/ .$, $/>/>=/
+goto(30, factor)	{[item -> factor.item', +/-/$]}	53	{[item -> factor.item', +/-/$]; [item' -> .* factor item', +/-/$]; [item' -> ./ factor item', +/-/$]; [item' -> .% factor item', +/-/$]; [item' -> .$, +/-/$]}
+goto(30, ()	{[factor -> (.value ), *///%/$]}	54	{[factor -> (.value ), *///%/$]; [value -> .item value', )]; [item -> .factor item', +/-/$]; [factor -> .( value ), *///%/$]; [factor -> .id call_function, *///%/$]; [factor -> .const, *///%/$]; [const -> .num_const, *///%/$]; [const -> .FLOAT, *///%/$]; [const -> .CHAR, *///%/$]; [const -> .STR, *///%/$]; [num_const -> .INT10, *///%/$]; [num_const -> .INT8, *///%/$]; [num_const -> .INT16, *///%/$]}
+goto(30, id)	{[factor -> id.call_function, *///%/$]}	55	{[factor -> id.call_function, *///%/$]; [call_function -> .( es ), *///%/$]; [call_function -> .$, *///%/$]}
+goto(30, const)	{[factor -> const., *///%/$]}	56	{[factor -> const., *///%/$]}
+goto(30, num_const)	{[const -> num_const., *///%/$]}	57	{[const -> num_const., *///%/$]}
+goto(30, FLOAT)	{[const -> FLOAT., *///%/$]}	58	{[const -> FLOAT., *///%/$]}
+goto(30, CHAR)	{[const -> CHAR., *///%/$]}	59	{[const -> CHAR., *///%/$]}
+goto(30, STR)	{[const -> STR., *///%/$]}	60	{[const -> STR., *///%/$]}
+goto(30, INT10)	{[num_const -> INT10., *///%/$]}	61	{[num_const -> INT10., *///%/$]}
+goto(30, INT8)	{[num_const -> INT8., *///%/$]}	62	{[num_const -> INT8., *///%/$]}
+goto(30, INT16)	{[num_const -> INT16., *///%/$]}	63	{[num_const -> INT16., *///%/$]}
+goto(31, define_stmts)	{[define_stmts -> define_stmt define_stmts., $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	64	{[define_stmts -> define_stmt define_stmts., $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}
+goto(31, define_stmt)	{[define_stmts -> define_stmt.define_stmts, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	31	 
+goto(31, $)	{[define_stmts -> $., $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	32	 
+goto(31, type)	{[define_stmt -> type.id init vars ;, $/int/short/long/char/float/double/void/unsigned]}	33	 
+goto(31, int)	{[type -> int., id]}	3	 
+goto(31, short)	{[type -> short., id]}	4	 
+goto(31, long)	{[type -> long., id]}	5	 
+goto(31, char)	{[type -> char., id]}	6	 
+goto(31, float)	{[type -> float., id]}	7	 
+goto(31, double)	{[type -> double., id]}	8	 
+goto(31, void)	{[type -> void., id]}	9	 
+goto(31, unsigned)	{[type -> unsigned.type, id]}	10	 
+goto(33, id)	{[define_stmt -> type id.init vars ;, $/int/short/long/char/float/double/void/unsigned]}	65	{[define_stmt -> type id.init vars ;, $/int/short/long/char/float/double/void/unsigned]; [init -> .= expression, ,/$]; [init -> .$, ,/$]}
+goto(34, id)	{[arg -> , type id.arg, )]}	66	{[arg -> , type id.arg, )]; [arg -> ., type id arg, )]; [arg -> .$, )]}
+goto(35, })	{[block -> { define_stmts stmts }., $/int/short/long/char/float/double/void/unsigned]}	67	{[block -> { define_stmts stmts }., $/int/short/long/char/float/double/void/unsigned]}
+goto(36, stmts)	{[stmts -> stmt stmts., }]}	68	{[stmts -> stmt stmts., }]}
+goto(36, stmt)	{[stmts -> stmt.stmts, }]}	36	 
+goto(36, $)	{[stmts -> $., }]}	37	 
+goto(36, assign_stmt)	{[stmt -> assign_stmt., $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	38	 
+goto(36, jump_stmt)	{[stmt -> jump_stmt., $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	39	 
+goto(36, iteration_stmt)	{[stmt -> iteration_stmt., $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	40	 
+goto(36, branch_stmt)	{[stmt -> branch_stmt., $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	41	 
+goto(36, expression)	{[assign_stmt -> expression.;, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	42	 
+goto(36, continue)	{[jump_stmt -> continue.;, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	43	 
+goto(36, break)	{[jump_stmt -> break.;, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	44	 
+goto(36, return)	{[jump_stmt -> return.isnull_expr ;, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	45	 
+goto(36, while)	{[iteration_stmt -> while.( logical_expression ) block_stmt, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	46	 
+goto(36, for)	{[iteration_stmt -> for.( isnull_expr ; isnull_expr ; isnull_expr ) block_stmt, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	47	 
+goto(36, do)	{[iteration_stmt -> do.block_stmt while ( logical_expression ) ;, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	48	 
+goto(36, if)	{[branch_stmt -> if.( logical_expression ) block_stmt result, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	49	 
+goto(36, switch)	{[branch_stmt -> switch.( id ) { case_stmt case_stmts default_stmt }, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	50	 
+goto(36, value)	{[expression -> value.operation, ;]}	51	 
+goto(36, item)	{[value -> item.value', $/>/>=/	52	 
+goto(36, factor)	{[item -> factor.item', +/-/$]}	53	 
+goto(36, ()	{[factor -> (.value ), *///%/$]}	54	 
+goto(36, id)	{[factor -> id.call_function, *///%/$]}	55	 
+goto(36, const)	{[factor -> const., *///%/$]}	56	 
+goto(36, num_const)	{[const -> num_const., *///%/$]}	57	 
+goto(36, FLOAT)	{[const -> FLOAT., *///%/$]}	58	 
+goto(36, CHAR)	{[const -> CHAR., *///%/$]}	59	 
+goto(36, STR)	{[const -> STR., *///%/$]}	60	 
+goto(36, INT10)	{[num_const -> INT10., *///%/$]}	61	 
+goto(36, INT8)	{[num_const -> INT8., *///%/$]}	62	 
+goto(36, INT16)	{[num_const -> INT16., *///%/$]}	63	 
+goto(42, ;)	{[assign_stmt -> expression ;., $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	69	{[assign_stmt -> expression ;., $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}
+goto(43, ;)	{[jump_stmt -> continue ;., $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	70	{[jump_stmt -> continue ;., $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}
+goto(44, ;)	{[jump_stmt -> break ;., $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	71	{[jump_stmt -> break ;., $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}
+goto(45, isnull_expr)	{[jump_stmt -> return isnull_expr.;, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	72	{[jump_stmt -> return isnull_expr.;, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}
+goto(45, expression)	{[isnull_expr -> expression., ;]}	73	{[isnull_expr -> expression., ;]}
+goto(45, $)	{[isnull_expr -> $., ;]}	74	{[isnull_expr -> $., ;]}
+goto(45, value)	{[expression -> value.operation, ;]}	51	 
+goto(45, item)	{[value -> item.value', $/>/>=/	52	 
+goto(45, factor)	{[item -> factor.item', +/-/$]}	53	 
+goto(45, ()	{[factor -> (.value ), *///%/$]}	54	 
+goto(45, id)	{[factor -> id.call_function, *///%/$]}	55	 
+goto(45, const)	{[factor -> const., *///%/$]}	56	 
+goto(45, num_const)	{[const -> num_const., *///%/$]}	57	 
+goto(45, FLOAT)	{[const -> FLOAT., *///%/$]}	58	 
+goto(45, CHAR)	{[const -> CHAR., *///%/$]}	59	 
+goto(45, STR)	{[const -> STR., *///%/$]}	60	 
+goto(45, INT10)	{[num_const -> INT10., *///%/$]}	61	 
+goto(45, INT8)	{[num_const -> INT8., *///%/$]}	62	 
+goto(45, INT16)	{[num_const -> INT16., *///%/$]}	63	 
+goto(46, ()	{[iteration_stmt -> while (.logical_expression ) block_stmt, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	75	{[iteration_stmt -> while (.logical_expression ) block_stmt, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [logical_expression -> .! expression bool_expression, )]; [logical_expression -> .expression bool_expression, )]; [expression -> .value operation, $/&&/||]; [value -> .item value', $/>/>=/ .factor item', +/-/$]; [factor -> .( value ), *///%/$]; [factor -> .id call_function, *///%/$]; [factor -> .const, *///%/$]; [const -> .num_const, *///%/$]; [const -> .FLOAT, *///%/$]; [const -> .CHAR, *///%/$]; [const -> .STR, *///%/$]; [num_const -> .INT10, *///%/$]; [num_const -> .INT8, *///%/$]; [num_const -> .INT16, *///%/$]}
+goto(47, ()	{[iteration_stmt -> for (.isnull_expr ; isnull_expr ; isnull_expr ) block_stmt, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	76	{[iteration_stmt -> for (.isnull_expr ; isnull_expr ; isnull_expr ) block_stmt, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [isnull_expr -> .expression, ;]; [isnull_expr -> .$, ;]; [expression -> .value operation, ;]; [value -> .item value', $/>/>=/ .factor item', +/-/$]; [factor -> .( value ), *///%/$]; [factor -> .id call_function, *///%/$]; [factor -> .const, *///%/$]; [const -> .num_const, *///%/$]; [const -> .FLOAT, *///%/$]; [const -> .CHAR, *///%/$]; [const -> .STR, *///%/$]; [num_const -> .INT10, *///%/$]; [num_const -> .INT8, *///%/$]; [num_const -> .INT16, *///%/$]}
+goto(48, block_stmt)	{[iteration_stmt -> do block_stmt.while ( logical_expression ) ;, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	77	{[iteration_stmt -> do block_stmt.while ( logical_expression ) ;, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}
+goto(48, {)	{[block_stmt -> {.stmts }, while]}	78	{[block_stmt -> {.stmts }, while]; [stmts -> .stmt stmts, }]; [stmts -> .$, }]; [stmt -> .assign_stmt, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [stmt -> .jump_stmt, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [stmt -> .iteration_stmt, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [stmt -> .branch_stmt, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [assign_stmt -> .expression ;, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [jump_stmt -> .continue ;, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [jump_stmt -> .break ;, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [jump_stmt -> .return isnull_expr ;, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [iteration_stmt -> .while ( logical_expression ) block_stmt, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [iteration_stmt -> .for ( isnull_expr ; isnull_expr ; isnull_expr ) block_stmt, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [iteration_stmt -> .do block_stmt while ( logical_expression ) ;, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [branch_stmt -> .if ( logical_expression ) block_stmt result, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [branch_stmt -> .switch ( id ) { case_stmt case_stmts default_stmt }, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [expression -> .value operation, ;]; [value -> .item value', $/>/>=/ .factor item', +/-/$]; [factor -> .( value ), *///%/$]; [factor -> .id call_function, *///%/$]; [factor -> .const, *///%/$]; [const -> .num_const, *///%/$]; [const -> .FLOAT, *///%/$]; [const -> .CHAR, *///%/$]; [const -> .STR, *///%/$]; [num_const -> .INT10, *///%/$]; [num_const -> .INT8, *///%/$]; [num_const -> .INT16, *///%/$]}
+goto(49, ()	{[branch_stmt -> if (.logical_expression ) block_stmt result, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	79	{[branch_stmt -> if (.logical_expression ) block_stmt result, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [logical_expression -> .! expression bool_expression, )]; [logical_expression -> .expression bool_expression, )]; [expression -> .value operation, $/&&/||]; [value -> .item value', $/>/>=/ .factor item', +/-/$]; [factor -> .( value ), *///%/$]; [factor -> .id call_function, *///%/$]; [factor -> .const, *///%/$]; [const -> .num_const, *///%/$]; [const -> .FLOAT, *///%/$]; [const -> .CHAR, *///%/$]; [const -> .STR, *///%/$]; [num_const -> .INT10, *///%/$]; [num_const -> .INT8, *///%/$]; [num_const -> .INT16, *///%/$]}
+goto(50, ()	{[branch_stmt -> switch (.id ) { case_stmt case_stmts default_stmt }, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	80	{[branch_stmt -> switch (.id ) { case_stmt case_stmts default_stmt }, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}
+goto(51, operation)	{[expression -> value operation., ;]}	81	{[expression -> value operation., ;]}
+goto(51, compare_op)	{[operation -> compare_op.value, ;]}	82	{[operation -> compare_op.value, ;]; [value -> .item value', ;]; [item -> .factor item', +/-/$]; [factor -> .( value ), *///%/$]; [factor -> .id call_function, *///%/$]; [factor -> .const, *///%/$]; [const -> .num_const, *///%/$]; [const -> .FLOAT, *///%/$]; [const -> .CHAR, *///%/$]; [const -> .STR, *///%/$]; [num_const -> .INT10, *///%/$]; [num_const -> .INT8, *///%/$]; [num_const -> .INT16, *///%/$]}
+goto(51, equal_op)	{[operation -> equal_op.value, ;]}	83	{[operation -> equal_op.value, ;]; [value -> .item value', ;]; [item -> .factor item', +/-/$]; [factor -> .( value ), *///%/$]; [factor -> .id call_function, *///%/$]; [factor -> .const, *///%/$]; [const -> .num_const, *///%/$]; [const -> .FLOAT, *///%/$]; [const -> .CHAR, *///%/$]; [const -> .STR, *///%/$]; [num_const -> .INT10, *///%/$]; [num_const -> .INT8, *///%/$]; [num_const -> .INT16, *///%/$]}
+goto(51, $)	{[operation -> $., ;]}	84	{[operation -> $., ;]}
+goto(51, >)	{[compare_op -> >., (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	85	{[compare_op -> >., (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}
+goto(51, >=)	{[compare_op -> >=., (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	86	{[compare_op -> >=., (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}
+goto(51, <)	{[compare_op -> <., (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	87	{[compare_op -> <., (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}
+goto(51, <=)	{[compare_op -> <=., (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	88	{[compare_op -> <=., (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}
+goto(51, ==)	{[compare_op -> ==., (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	89	{[compare_op -> ==., (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}
+goto(51, !=)	{[compare_op -> !=., (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	90	{[compare_op -> !=., (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}
+goto(51, =)	{[equal_op -> =., (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	91	{[equal_op -> =., (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}
+goto(51, +=)	{[equal_op -> +=., (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	92	{[equal_op -> +=., (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}
+goto(51, -=)	{[equal_op -> -=., (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	93	{[equal_op -> -=., (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}
+goto(51, *=)	{[equal_op -> *=., (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	94	{[equal_op -> *=., (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}
+goto(51, /=)	{[equal_op -> /=., (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	95	{[equal_op -> /=., (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}
+goto(51, %=)	{[equal_op -> %=., (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	96	{[equal_op -> %=., (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}
+goto(52, value')	{[value -> item value'., $/>/>=/}	97	{[value -> item value'., $/>/>=/}
+goto(52, +)	{[value' -> +.item value', $/>/>=/	98	{[value' -> +.item value', $/>/>=/ .factor item', +/-/$]; [factor -> .( value ), *///%/$]; [factor -> .id call_function, *///%/$]; [factor -> .const, *///%/$]; [const -> .num_const, *///%/$]; [const -> .FLOAT, *///%/$]; [const -> .CHAR, *///%/$]; [const -> .STR, *///%/$]; [num_const -> .INT10, *///%/$]; [num_const -> .INT8, *///%/$]; [num_const -> .INT16, *///%/$]}
+goto(52, -)	{[value' -> -.item value', $/>/>=/	99	{[value' -> -.item value', $/>/>=/ .factor item', +/-/$]; [factor -> .( value ), *///%/$]; [factor -> .id call_function, *///%/$]; [factor -> .const, *///%/$]; [const -> .num_const, *///%/$]; [const -> .FLOAT, *///%/$]; [const -> .CHAR, *///%/$]; [const -> .STR, *///%/$]; [num_const -> .INT10, *///%/$]; [num_const -> .INT8, *///%/$]; [num_const -> .INT16, *///%/$]}
+goto(52, $)	{[value' -> $., $/>/>=/}	100	{[value' -> $., $/>/>=/}
+goto(53, item')	{[item -> factor item'., +/-/$]}	101	{[item -> factor item'., +/-/$]}
+goto(53, *)	{[item' -> *.factor item', +/-/$]}	102	{[item' -> *.factor item', +/-/$]; [factor -> .( value ), *///%/$]; [factor -> .id call_function, *///%/$]; [factor -> .const, *///%/$]; [const -> .num_const, *///%/$]; [const -> .FLOAT, *///%/$]; [const -> .CHAR, *///%/$]; [const -> .STR, *///%/$]; [num_const -> .INT10, *///%/$]; [num_const -> .INT8, *///%/$]; [num_const -> .INT16, *///%/$]}
+goto(53, /)	{[item' -> /.factor item', +/-/$]}	103	{[item' -> /.factor item', +/-/$]; [factor -> .( value ), *///%/$]; [factor -> .id call_function, *///%/$]; [factor -> .const, *///%/$]; [const -> .num_const, *///%/$]; [const -> .FLOAT, *///%/$]; [const -> .CHAR, *///%/$]; [const -> .STR, *///%/$]; [num_const -> .INT10, *///%/$]; [num_const -> .INT8, *///%/$]; [num_const -> .INT16, *///%/$]}
+goto(53, %)	{[item' -> %.factor item', +/-/$]}	104	{[item' -> %.factor item', +/-/$]; [factor -> .( value ), *///%/$]; [factor -> .id call_function, *///%/$]; [factor -> .const, *///%/$]; [const -> .num_const, *///%/$]; [const -> .FLOAT, *///%/$]; [const -> .CHAR, *///%/$]; [const -> .STR, *///%/$]; [num_const -> .INT10, *///%/$]; [num_const -> .INT8, *///%/$]; [num_const -> .INT16, *///%/$]}
+goto(53, $)	{[item' -> $., +/-/$]}	105	{[item' -> $., +/-/$]}
+goto(54, value)	{[factor -> ( value.), *///%/$]}	106	{[factor -> ( value.), *///%/$]}
+goto(54, item)	{[value -> item.value', )]}	107	{[value -> item.value', )]; [value' -> .+ item value', )]; [value' -> .- item value', )]; [value' -> .$, )]}
+goto(54, factor)	{[item -> factor.item', +/-/$]}	53	 
+goto(54, ()	{[factor -> (.value ), *///%/$]}	54	 
+goto(54, id)	{[factor -> id.call_function, *///%/$]}	55	 
+goto(54, const)	{[factor -> const., *///%/$]}	56	 
+goto(54, num_const)	{[const -> num_const., *///%/$]}	57	 
+goto(54, FLOAT)	{[const -> FLOAT., *///%/$]}	58	 
+goto(54, CHAR)	{[const -> CHAR., *///%/$]}	59	 
+goto(54, STR)	{[const -> STR., *///%/$]}	60	 
+goto(54, INT10)	{[num_const -> INT10., *///%/$]}	61	 
+goto(54, INT8)	{[num_const -> INT8., *///%/$]}	62	 
+goto(54, INT16)	{[num_const -> INT16., *///%/$]}	63	 
+goto(55, call_function)	{[factor -> id call_function., *///%/$]}	108	{[factor -> id call_function., *///%/$]}
+goto(55, ()	{[call_function -> (.es ), *///%/$]}	109	{[call_function -> (.es ), *///%/$]; [es -> .isnull_expr isnull_es, )]; [isnull_expr -> .expression, ,/$]; [isnull_expr -> .$, ,/$]; [expression -> .value operation, ,/$]; [value -> .item value', $/>/>=/ .factor item', +/-/$]; [factor -> .( value ), *///%/$]; [factor -> .id call_function, *///%/$]; [factor -> .const, *///%/$]; [const -> .num_const, *///%/$]; [const -> .FLOAT, *///%/$]; [const -> .CHAR, *///%/$]; [const -> .STR, *///%/$]; [num_const -> .INT10, *///%/$]; [num_const -> .INT8, *///%/$]; [num_const -> .INT16, *///%/$]}
+goto(55, $)	{[call_function -> $., *///%/$]}	110	{[call_function -> $., *///%/$]}
+goto(65, init)	{[define_stmt -> type id init.vars ;, $/int/short/long/char/float/double/void/unsigned]}	111	{[define_stmt -> type id init.vars ;, $/int/short/long/char/float/double/void/unsigned]; [vars -> ., id init vars, ;]; [vars -> .$, ;]}
+goto(65, =)	{[init -> =.expression, ,/$]}	112	{[init -> =.expression, ,/$]; [expression -> .value operation, ,/$]; [value -> .item value', $/>/>=/ .factor item', +/-/$]; [factor -> .( value ), *///%/$]; [factor -> .id call_function, *///%/$]; [factor -> .const, *///%/$]; [const -> .num_const, *///%/$]; [const -> .FLOAT, *///%/$]; [const -> .CHAR, *///%/$]; [const -> .STR, *///%/$]; [num_const -> .INT10, *///%/$]; [num_const -> .INT8, *///%/$]; [num_const -> .INT16, *///%/$]}
+goto(65, $)	{[init -> $., ,/$]}	113	{[init -> $., ,/$]}
+goto(66, arg)	{[arg -> , type id arg., )]}	114	{[arg -> , type id arg., )]}
+goto(66, ,)	{[arg -> ,.type id arg, )]}	28	 
+goto(66, $)	{[arg -> $., )]}	29	 
+goto(72, ;)	{[jump_stmt -> return isnull_expr ;., $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	115	{[jump_stmt -> return isnull_expr ;., $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}
+goto(75, logical_expression)	{[iteration_stmt -> while ( logical_expression.) block_stmt, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	116	{[iteration_stmt -> while ( logical_expression.) block_stmt, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}
+goto(75, !)	{[logical_expression -> !.expression bool_expression, )]}	117	{[logical_expression -> !.expression bool_expression, )]; [expression -> .value operation, $/&&/||]; [value -> .item value', $/>/>=/ .factor item', +/-/$]; [factor -> .( value ), *///%/$]; [factor -> .id call_function, *///%/$]; [factor -> .const, *///%/$]; [const -> .num_const, *///%/$]; [const -> .FLOAT, *///%/$]; [const -> .CHAR, *///%/$]; [const -> .STR, *///%/$]; [num_const -> .INT10, *///%/$]; [num_const -> .INT8, *///%/$]; [num_const -> .INT16, *///%/$]}
+goto(75, expression)	{[logical_expression -> expression.bool_expression, )]}	118	{[logical_expression -> expression.bool_expression, )]; [bool_expression -> .lop expression bool_expression, )]; [bool_expression -> .$, )]; [lop -> .&&, (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [lop -> .||, (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}
+goto(75, value)	{[expression -> value.operation, $/&&/||]}	119	{[expression -> value.operation, $/&&/||]; [operation -> .compare_op value, $/&&/||]; [operation -> .equal_op value, $/&&/||]; [operation -> .$, $/&&/||]; [compare_op -> .>, (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [compare_op -> .>=, (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [compare_op -> .<, (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [compare_op -> .<=, (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [compare_op -> .==, (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [compare_op -> .!=, (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [equal_op -> .=, (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [equal_op -> .+=, (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [equal_op -> .-=, (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [equal_op -> .*=, (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [equal_op -> ./=, (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [equal_op -> .%=, (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}
+goto(75, item)	{[value -> item.value', $/>/>=/	52	 
+goto(75, factor)	{[item -> factor.item', +/-/$]}	53	 
+goto(75, ()	{[factor -> (.value ), *///%/$]}	54	 
+goto(75, id)	{[factor -> id.call_function, *///%/$]}	55	 
+goto(75, const)	{[factor -> const., *///%/$]}	56	 
+goto(75, num_const)	{[const -> num_const., *///%/$]}	57	 
+goto(75, FLOAT)	{[const -> FLOAT., *///%/$]}	58	 
+goto(75, CHAR)	{[const -> CHAR., *///%/$]}	59	 
+goto(75, STR)	{[const -> STR., *///%/$]}	60	 
+goto(75, INT10)	{[num_const -> INT10., *///%/$]}	61	 
+goto(75, INT8)	{[num_const -> INT8., *///%/$]}	62	 
+goto(75, INT16)	{[num_const -> INT16., *///%/$]}	63	 
+goto(76, isnull_expr)	{[iteration_stmt -> for ( isnull_expr.; isnull_expr ; isnull_expr ) block_stmt, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	120	{[iteration_stmt -> for ( isnull_expr.; isnull_expr ; isnull_expr ) block_stmt, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}
+goto(76, expression)	{[isnull_expr -> expression., ;]}	73	 
+goto(76, $)	{[isnull_expr -> $., ;]}	74	 
+goto(76, value)	{[expression -> value.operation, ;]}	51	 
+goto(76, item)	{[value -> item.value', $/>/>=/	52	 
+goto(76, factor)	{[item -> factor.item', +/-/$]}	53	 
+goto(76, ()	{[factor -> (.value ), *///%/$]}	54	 
+goto(76, id)	{[factor -> id.call_function, *///%/$]}	55	 
+goto(76, const)	{[factor -> const., *///%/$]}	56	 
+goto(76, num_const)	{[const -> num_const., *///%/$]}	57	 
+goto(76, FLOAT)	{[const -> FLOAT., *///%/$]}	58	 
+goto(76, CHAR)	{[const -> CHAR., *///%/$]}	59	 
+goto(76, STR)	{[const -> STR., *///%/$]}	60	 
+goto(76, INT10)	{[num_const -> INT10., *///%/$]}	61	 
+goto(76, INT8)	{[num_const -> INT8., *///%/$]}	62	 
+goto(76, INT16)	{[num_const -> INT16., *///%/$]}	63	 
+goto(77, while)	{[iteration_stmt -> do block_stmt while.( logical_expression ) ;, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	121	{[iteration_stmt -> do block_stmt while.( logical_expression ) ;, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}
+goto(78, stmts)	{[block_stmt -> { stmts.}, while]}	122	{[block_stmt -> { stmts.}, while]}
+goto(78, stmt)	{[stmts -> stmt.stmts, }]}	36	 
+goto(78, $)	{[stmts -> $., }]}	37	 
+goto(78, assign_stmt)	{[stmt -> assign_stmt., $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	38	 
+goto(78, jump_stmt)	{[stmt -> jump_stmt., $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	39	 
+goto(78, iteration_stmt)	{[stmt -> iteration_stmt., $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	40	 
+goto(78, branch_stmt)	{[stmt -> branch_stmt., $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	41	 
+goto(78, expression)	{[assign_stmt -> expression.;, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	42	 
+goto(78, continue)	{[jump_stmt -> continue.;, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	43	 
+goto(78, break)	{[jump_stmt -> break.;, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	44	 
+goto(78, return)	{[jump_stmt -> return.isnull_expr ;, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	45	 
+goto(78, while)	{[iteration_stmt -> while.( logical_expression ) block_stmt, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	46	 
+goto(78, for)	{[iteration_stmt -> for.( isnull_expr ; isnull_expr ; isnull_expr ) block_stmt, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	47	 
+goto(78, do)	{[iteration_stmt -> do.block_stmt while ( logical_expression ) ;, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	48	 
+goto(78, if)	{[branch_stmt -> if.( logical_expression ) block_stmt result, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	49	 
+goto(78, switch)	{[branch_stmt -> switch.( id ) { case_stmt case_stmts default_stmt }, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	50	 
+goto(78, value)	{[expression -> value.operation, ;]}	51	 
+goto(78, item)	{[value -> item.value', $/>/>=/	52	 
+goto(78, factor)	{[item -> factor.item', +/-/$]}	53	 
+goto(78, ()	{[factor -> (.value ), *///%/$]}	54	 
+goto(78, id)	{[factor -> id.call_function, *///%/$]}	55	 
+goto(78, const)	{[factor -> const., *///%/$]}	56	 
+goto(78, num_const)	{[const -> num_const., *///%/$]}	57	 
+goto(78, FLOAT)	{[const -> FLOAT., *///%/$]}	58	 
+goto(78, CHAR)	{[const -> CHAR., *///%/$]}	59	 
+goto(78, STR)	{[const -> STR., *///%/$]}	60	 
+goto(78, INT10)	{[num_const -> INT10., *///%/$]}	61	 
+goto(78, INT8)	{[num_const -> INT8., *///%/$]}	62	 
+goto(78, INT16)	{[num_const -> INT16., *///%/$]}	63	 
+goto(79, logical_expression)	{[branch_stmt -> if ( logical_expression.) block_stmt result, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	123	{[branch_stmt -> if ( logical_expression.) block_stmt result, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}
+goto(79, !)	{[logical_expression -> !.expression bool_expression, )]}	117	 
+goto(79, expression)	{[logical_expression -> expression.bool_expression, )]}	118	 
+goto(79, value)	{[expression -> value.operation, $/&&/||]}	119	 
+goto(79, item)	{[value -> item.value', $/>/>=/	52	 
+goto(79, factor)	{[item -> factor.item', +/-/$]}	53	 
+goto(79, ()	{[factor -> (.value ), *///%/$]}	54	 
+goto(79, id)	{[factor -> id.call_function, *///%/$]}	55	 
+goto(79, const)	{[factor -> const., *///%/$]}	56	 
+goto(79, num_const)	{[const -> num_const., *///%/$]}	57	 
+goto(79, FLOAT)	{[const -> FLOAT., *///%/$]}	58	 
+goto(79, CHAR)	{[const -> CHAR., *///%/$]}	59	 
+goto(79, STR)	{[const -> STR., *///%/$]}	60	 
+goto(79, INT10)	{[num_const -> INT10., *///%/$]}	61	 
+goto(79, INT8)	{[num_const -> INT8., *///%/$]}	62	 
+goto(79, INT16)	{[num_const -> INT16., *///%/$]}	63	 
+goto(80, id)	{[branch_stmt -> switch ( id.) { case_stmt case_stmts default_stmt }, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	124	{[branch_stmt -> switch ( id.) { case_stmt case_stmts default_stmt }, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}
+goto(82, value)	{[operation -> compare_op value., ;]}	125	{[operation -> compare_op value., ;]}
+goto(82, item)	{[value -> item.value', ;]}	126	{[value -> item.value', ;]; [value' -> .+ item value', ;]; [value' -> .- item value', ;]; [value' -> .$, ;]}
+goto(82, factor)	{[item -> factor.item', +/-/$]}	53	 
+goto(82, ()	{[factor -> (.value ), *///%/$]}	54	 
+goto(82, id)	{[factor -> id.call_function, *///%/$]}	55	 
+goto(82, const)	{[factor -> const., *///%/$]}	56	 
+goto(82, num_const)	{[const -> num_const., *///%/$]}	57	 
+goto(82, FLOAT)	{[const -> FLOAT., *///%/$]}	58	 
+goto(82, CHAR)	{[const -> CHAR., *///%/$]}	59	 
+goto(82, STR)	{[const -> STR., *///%/$]}	60	 
+goto(82, INT10)	{[num_const -> INT10., *///%/$]}	61	 
+goto(82, INT8)	{[num_const -> INT8., *///%/$]}	62	 
+goto(82, INT16)	{[num_const -> INT16., *///%/$]}	63	 
+goto(83, value)	{[operation -> equal_op value., ;]}	127	{[operation -> equal_op value., ;]}
+goto(83, item)	{[value -> item.value', ;]}	126	 
+goto(83, factor)	{[item -> factor.item', +/-/$]}	53	 
+goto(83, ()	{[factor -> (.value ), *///%/$]}	54	 
+goto(83, id)	{[factor -> id.call_function, *///%/$]}	55	 
+goto(83, const)	{[factor -> const., *///%/$]}	56	 
+goto(83, num_const)	{[const -> num_const., *///%/$]}	57	 
+goto(83, FLOAT)	{[const -> FLOAT., *///%/$]}	58	 
+goto(83, CHAR)	{[const -> CHAR., *///%/$]}	59	 
+goto(83, STR)	{[const -> STR., *///%/$]}	60	 
+goto(83, INT10)	{[num_const -> INT10., *///%/$]}	61	 
+goto(83, INT8)	{[num_const -> INT8., *///%/$]}	62	 
+goto(83, INT16)	{[num_const -> INT16., *///%/$]}	63	 
+goto(98, item)	{[value' -> + item.value', $/>/>=/	128	{[value' -> + item.value', $/>/>=/ .+ item value', $/>/>=/ .- item value', $/>/>=/ .$, $/>/>=/
+goto(98, factor)	{[item -> factor.item', +/-/$]}	53	 
+goto(98, ()	{[factor -> (.value ), *///%/$]}	54	 
+goto(98, id)	{[factor -> id.call_function, *///%/$]}	55	 
+goto(98, const)	{[factor -> const., *///%/$]}	56	 
+goto(98, num_const)	{[const -> num_const., *///%/$]}	57	 
+goto(98, FLOAT)	{[const -> FLOAT., *///%/$]}	58	 
+goto(98, CHAR)	{[const -> CHAR., *///%/$]}	59	 
+goto(98, STR)	{[const -> STR., *///%/$]}	60	 
+goto(98, INT10)	{[num_const -> INT10., *///%/$]}	61	 
+goto(98, INT8)	{[num_const -> INT8., *///%/$]}	62	 
+goto(98, INT16)	{[num_const -> INT16., *///%/$]}	63	 
+goto(99, item)	{[value' -> - item.value', $/>/>=/	129	{[value' -> - item.value', $/>/>=/ .+ item value', $/>/>=/ .- item value', $/>/>=/ .$, $/>/>=/
+goto(99, factor)	{[item -> factor.item', +/-/$]}	53	 
+goto(99, ()	{[factor -> (.value ), *///%/$]}	54	 
+goto(99, id)	{[factor -> id.call_function, *///%/$]}	55	 
+goto(99, const)	{[factor -> const., *///%/$]}	56	 
+goto(99, num_const)	{[const -> num_const., *///%/$]}	57	 
+goto(99, FLOAT)	{[const -> FLOAT., *///%/$]}	58	 
+goto(99, CHAR)	{[const -> CHAR., *///%/$]}	59	 
+goto(99, STR)	{[const -> STR., *///%/$]}	60	 
+goto(99, INT10)	{[num_const -> INT10., *///%/$]}	61	 
+goto(99, INT8)	{[num_const -> INT8., *///%/$]}	62	 
+goto(99, INT16)	{[num_const -> INT16., *///%/$]}	63	 
+goto(102, factor)	{[item' -> * factor.item', +/-/$]}	130	{[item' -> * factor.item', +/-/$]; [item' -> .* factor item', +/-/$]; [item' -> ./ factor item', +/-/$]; [item' -> .% factor item', +/-/$]; [item' -> .$, +/-/$]}
+goto(102, ()	{[factor -> (.value ), *///%/$]}	54	 
+goto(102, id)	{[factor -> id.call_function, *///%/$]}	55	 
+goto(102, const)	{[factor -> const., *///%/$]}	56	 
+goto(102, num_const)	{[const -> num_const., *///%/$]}	57	 
+goto(102, FLOAT)	{[const -> FLOAT., *///%/$]}	58	 
+goto(102, CHAR)	{[const -> CHAR., *///%/$]}	59	 
+goto(102, STR)	{[const -> STR., *///%/$]}	60	 
+goto(102, INT10)	{[num_const -> INT10., *///%/$]}	61	 
+goto(102, INT8)	{[num_const -> INT8., *///%/$]}	62	 
+goto(102, INT16)	{[num_const -> INT16., *///%/$]}	63	 
+goto(103, factor)	{[item' -> / factor.item', +/-/$]}	131	{[item' -> / factor.item', +/-/$]; [item' -> .* factor item', +/-/$]; [item' -> ./ factor item', +/-/$]; [item' -> .% factor item', +/-/$]; [item' -> .$, +/-/$]}
+goto(103, ()	{[factor -> (.value ), *///%/$]}	54	 
+goto(103, id)	{[factor -> id.call_function, *///%/$]}	55	 
+goto(103, const)	{[factor -> const., *///%/$]}	56	 
+goto(103, num_const)	{[const -> num_const., *///%/$]}	57	 
+goto(103, FLOAT)	{[const -> FLOAT., *///%/$]}	58	 
+goto(103, CHAR)	{[const -> CHAR., *///%/$]}	59	 
+goto(103, STR)	{[const -> STR., *///%/$]}	60	 
+goto(103, INT10)	{[num_const -> INT10., *///%/$]}	61	 
+goto(103, INT8)	{[num_const -> INT8., *///%/$]}	62	 
+goto(103, INT16)	{[num_const -> INT16., *///%/$]}	63	 
+goto(104, factor)	{[item' -> % factor.item', +/-/$]}	132	{[item' -> % factor.item', +/-/$]; [item' -> .* factor item', +/-/$]; [item' -> ./ factor item', +/-/$]; [item' -> .% factor item', +/-/$]; [item' -> .$, +/-/$]}
+goto(104, ()	{[factor -> (.value ), *///%/$]}	54	 
+goto(104, id)	{[factor -> id.call_function, *///%/$]}	55	 
+goto(104, const)	{[factor -> const., *///%/$]}	56	 
+goto(104, num_const)	{[const -> num_const., *///%/$]}	57	 
+goto(104, FLOAT)	{[const -> FLOAT., *///%/$]}	58	 
+goto(104, CHAR)	{[const -> CHAR., *///%/$]}	59	 
+goto(104, STR)	{[const -> STR., *///%/$]}	60	 
+goto(104, INT10)	{[num_const -> INT10., *///%/$]}	61	 
+goto(104, INT8)	{[num_const -> INT8., *///%/$]}	62	 
+goto(104, INT16)	{[num_const -> INT16., *///%/$]}	63	 
+goto(106, ))	{[factor -> ( value )., *///%/$]}	133	{[factor -> ( value )., *///%/$]}
+goto(107, value')	{[value -> item value'., )]}	134	{[value -> item value'., )]}
+goto(107, +)	{[value' -> +.item value', )]}	135	{[value' -> +.item value', )]; [item -> .factor item', +/-/$]; [factor -> .( value ), *///%/$]; [factor -> .id call_function, *///%/$]; [factor -> .const, *///%/$]; [const -> .num_const, *///%/$]; [const -> .FLOAT, *///%/$]; [const -> .CHAR, *///%/$]; [const -> .STR, *///%/$]; [num_const -> .INT10, *///%/$]; [num_const -> .INT8, *///%/$]; [num_const -> .INT16, *///%/$]}
+goto(107, -)	{[value' -> -.item value', )]}	136	{[value' -> -.item value', )]; [item -> .factor item', +/-/$]; [factor -> .( value ), *///%/$]; [factor -> .id call_function, *///%/$]; [factor -> .const, *///%/$]; [const -> .num_const, *///%/$]; [const -> .FLOAT, *///%/$]; [const -> .CHAR, *///%/$]; [const -> .STR, *///%/$]; [num_const -> .INT10, *///%/$]; [num_const -> .INT8, *///%/$]; [num_const -> .INT16, *///%/$]}
+goto(107, $)	{[value' -> $., )]}	137	{[value' -> $., )]}
+goto(109, es)	{[call_function -> ( es.), *///%/$]}	138	{[call_function -> ( es.), *///%/$]}
+goto(109, isnull_expr)	{[es -> isnull_expr.isnull_es, )]}	139	{[es -> isnull_expr.isnull_es, )]; [isnull_es -> ., isnull_expr isnull_es, )]; [isnull_es -> .$, )]}
+goto(109, expression)	{[isnull_expr -> expression., ,/$]}	140	{[isnull_expr -> expression., ,/$]}
+goto(109, $)	{[isnull_expr -> $., ,/$]}	141	{[isnull_expr -> $., ,/$]}
+goto(109, value)	{[expression -> value.operation, ,/$]}	142	{[expression -> value.operation, ,/$]; [operation -> .compare_op value, ,/$]; [operation -> .equal_op value, ,/$]; [operation -> .$, ,/$]; [compare_op -> .>, (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [compare_op -> .>=, (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [compare_op -> .<, (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [compare_op -> .<=, (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [compare_op -> .==, (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [compare_op -> .!=, (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [equal_op -> .=, (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [equal_op -> .+=, (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [equal_op -> .-=, (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [equal_op -> .*=, (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [equal_op -> ./=, (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [equal_op -> .%=, (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}
+goto(109, item)	{[value -> item.value', $/>/>=/	52	 
+goto(109, factor)	{[item -> factor.item', +/-/$]}	53	 
+goto(109, ()	{[factor -> (.value ), *///%/$]}	54	 
+goto(109, id)	{[factor -> id.call_function, *///%/$]}	55	 
+goto(109, const)	{[factor -> const., *///%/$]}	56	 
+goto(109, num_const)	{[const -> num_const., *///%/$]}	57	 
+goto(109, FLOAT)	{[const -> FLOAT., *///%/$]}	58	 
+goto(109, CHAR)	{[const -> CHAR., *///%/$]}	59	 
+goto(109, STR)	{[const -> STR., *///%/$]}	60	 
+goto(109, INT10)	{[num_const -> INT10., *///%/$]}	61	 
+goto(109, INT8)	{[num_const -> INT8., *///%/$]}	62	 
+goto(109, INT16)	{[num_const -> INT16., *///%/$]}	63	 
+goto(111, vars)	{[define_stmt -> type id init vars.;, $/int/short/long/char/float/double/void/unsigned]}	143	{[define_stmt -> type id init vars.;, $/int/short/long/char/float/double/void/unsigned]}
+goto(111, ,)	{[vars -> ,.id init vars, ;]}	144	{[vars -> ,.id init vars, ;]}
+goto(111, $)	{[vars -> $., ;]}	145	{[vars -> $., ;]}
+goto(112, expression)	{[init -> = expression., ,/$]}	146	{[init -> = expression., ,/$]}
+goto(112, value)	{[expression -> value.operation, ,/$]}	142	 
+goto(112, item)	{[value -> item.value', $/>/>=/	52	 
+goto(112, factor)	{[item -> factor.item', +/-/$]}	53	 
+goto(112, ()	{[factor -> (.value ), *///%/$]}	54	 
+goto(112, id)	{[factor -> id.call_function, *///%/$]}	55	 
+goto(112, const)	{[factor -> const., *///%/$]}	56	 
+goto(112, num_const)	{[const -> num_const., *///%/$]}	57	 
+goto(112, FLOAT)	{[const -> FLOAT., *///%/$]}	58	 
+goto(112, CHAR)	{[const -> CHAR., *///%/$]}	59	 
+goto(112, STR)	{[const -> STR., *///%/$]}	60	 
+goto(112, INT10)	{[num_const -> INT10., *///%/$]}	61	 
+goto(112, INT8)	{[num_const -> INT8., *///%/$]}	62	 
+goto(112, INT16)	{[num_const -> INT16., *///%/$]}	63	 
+goto(116, ))	{[iteration_stmt -> while ( logical_expression ).block_stmt, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	147	{[iteration_stmt -> while ( logical_expression ).block_stmt, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [block_stmt -> .{ stmts }, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}
+goto(117, expression)	{[logical_expression -> ! expression.bool_expression, )]}	148	{[logical_expression -> ! expression.bool_expression, )]; [bool_expression -> .lop expression bool_expression, )]; [bool_expression -> .$, )]; [lop -> .&&, (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [lop -> .||, (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}
+goto(117, value)	{[expression -> value.operation, $/&&/||]}	119	 
+goto(117, item)	{[value -> item.value', $/>/>=/	52	 
+goto(117, factor)	{[item -> factor.item', +/-/$]}	53	 
+goto(117, ()	{[factor -> (.value ), *///%/$]}	54	 
+goto(117, id)	{[factor -> id.call_function, *///%/$]}	55	 
+goto(117, const)	{[factor -> const., *///%/$]}	56	 
+goto(117, num_const)	{[const -> num_const., *///%/$]}	57	 
+goto(117, FLOAT)	{[const -> FLOAT., *///%/$]}	58	 
+goto(117, CHAR)	{[const -> CHAR., *///%/$]}	59	 
+goto(117, STR)	{[const -> STR., *///%/$]}	60	 
+goto(117, INT10)	{[num_const -> INT10., *///%/$]}	61	 
+goto(117, INT8)	{[num_const -> INT8., *///%/$]}	62	 
+goto(117, INT16)	{[num_const -> INT16., *///%/$]}	63	 
+goto(118, bool_expression)	{[logical_expression -> expression bool_expression., )]}	149	{[logical_expression -> expression bool_expression., )]}
+goto(118, lop)	{[bool_expression -> lop.expression bool_expression, )]}	150	{[bool_expression -> lop.expression bool_expression, )]; [expression -> .value operation, $/&&/||]; [value -> .item value', $/>/>=/ .factor item', +/-/$]; [factor -> .( value ), *///%/$]; [factor -> .id call_function, *///%/$]; [factor -> .const, *///%/$]; [const -> .num_const, *///%/$]; [const -> .FLOAT, *///%/$]; [const -> .CHAR, *///%/$]; [const -> .STR, *///%/$]; [num_const -> .INT10, *///%/$]; [num_const -> .INT8, *///%/$]; [num_const -> .INT16, *///%/$]}
+goto(118, $)	{[bool_expression -> $., )]}	151	{[bool_expression -> $., )]}
+goto(118, &&)	{[lop -> &&., (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	152	{[lop -> &&., (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}
+goto(118, ||)	{[lop -> ||., (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	153	{[lop -> ||., (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}
+goto(119, operation)	{[expression -> value operation., $/&&/||]}	154	{[expression -> value operation., $/&&/||]}
+goto(119, compare_op)	{[operation -> compare_op.value, $/&&/||]}	155	{[operation -> compare_op.value, $/&&/||]; [value -> .item value', $/&&/||]; [item -> .factor item', +/-/$]; [factor -> .( value ), *///%/$]; [factor -> .id call_function, *///%/$]; [factor -> .const, *///%/$]; [const -> .num_const, *///%/$]; [const -> .FLOAT, *///%/$]; [const -> .CHAR, *///%/$]; [const -> .STR, *///%/$]; [num_const -> .INT10, *///%/$]; [num_const -> .INT8, *///%/$]; [num_const -> .INT16, *///%/$]}
+goto(119, equal_op)	{[operation -> equal_op.value, $/&&/||]}	156	{[operation -> equal_op.value, $/&&/||]; [value -> .item value', $/&&/||]; [item -> .factor item', +/-/$]; [factor -> .( value ), *///%/$]; [factor -> .id call_function, *///%/$]; [factor -> .const, *///%/$]; [const -> .num_const, *///%/$]; [const -> .FLOAT, *///%/$]; [const -> .CHAR, *///%/$]; [const -> .STR, *///%/$]; [num_const -> .INT10, *///%/$]; [num_const -> .INT8, *///%/$]; [num_const -> .INT16, *///%/$]}
+goto(119, $)	{[operation -> $., $/&&/||]}	157	{[operation -> $., $/&&/||]}
+goto(119, >)	{[compare_op -> >., (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	85	 
+goto(119, >=)	{[compare_op -> >=., (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	86	 
+goto(119, <)	{[compare_op -> <., (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	87	 
+goto(119, <=)	{[compare_op -> <=., (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	88	 
+goto(119, ==)	{[compare_op -> ==., (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	89	 
+goto(119, !=)	{[compare_op -> !=., (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	90	 
+goto(119, =)	{[equal_op -> =., (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	91	 
+goto(119, +=)	{[equal_op -> +=., (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	92	 
+goto(119, -=)	{[equal_op -> -=., (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	93	 
+goto(119, *=)	{[equal_op -> *=., (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	94	 
+goto(119, /=)	{[equal_op -> /=., (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	95	 
+goto(119, %=)	{[equal_op -> %=., (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	96	 
+goto(120, ;)	{[iteration_stmt -> for ( isnull_expr ;.isnull_expr ; isnull_expr ) block_stmt, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	158	{[iteration_stmt -> for ( isnull_expr ;.isnull_expr ; isnull_expr ) block_stmt, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [isnull_expr -> .expression, ;]; [isnull_expr -> .$, ;]; [expression -> .value operation, ;]; [value -> .item value', $/>/>=/ .factor item', +/-/$]; [factor -> .( value ), *///%/$]; [factor -> .id call_function, *///%/$]; [factor -> .const, *///%/$]; [const -> .num_const, *///%/$]; [const -> .FLOAT, *///%/$]; [const -> .CHAR, *///%/$]; [const -> .STR, *///%/$]; [num_const -> .INT10, *///%/$]; [num_const -> .INT8, *///%/$]; [num_const -> .INT16, *///%/$]}
+goto(121, ()	{[iteration_stmt -> do block_stmt while (.logical_expression ) ;, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	159	{[iteration_stmt -> do block_stmt while (.logical_expression ) ;, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [logical_expression -> .! expression bool_expression, )]; [logical_expression -> .expression bool_expression, )]; [expression -> .value operation, $/&&/||]; [value -> .item value', $/>/>=/ .factor item', +/-/$]; [factor -> .( value ), *///%/$]; [factor -> .id call_function, *///%/$]; [factor -> .const, *///%/$]; [const -> .num_const, *///%/$]; [const -> .FLOAT, *///%/$]; [const -> .CHAR, *///%/$]; [const -> .STR, *///%/$]; [num_const -> .INT10, *///%/$]; [num_const -> .INT8, *///%/$]; [num_const -> .INT16, *///%/$]}
+goto(122, })	{[block_stmt -> { stmts }., while]}	160	{[block_stmt -> { stmts }., while]}
+goto(123, ))	{[branch_stmt -> if ( logical_expression ).block_stmt result, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	161	{[branch_stmt -> if ( logical_expression ).block_stmt result, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [block_stmt -> .{ stmts }, else/$]}
+goto(124, ))	{[branch_stmt -> switch ( id ).{ case_stmt case_stmts default_stmt }, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	162	{[branch_stmt -> switch ( id ).{ case_stmt case_stmts default_stmt }, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}
+goto(126, value')	{[value -> item value'., ;]}	163	{[value -> item value'., ;]}
+goto(126, +)	{[value' -> +.item value', ;]}	164	{[value' -> +.item value', ;]; [item -> .factor item', +/-/$]; [factor -> .( value ), *///%/$]; [factor -> .id call_function, *///%/$]; [factor -> .const, *///%/$]; [const -> .num_const, *///%/$]; [const -> .FLOAT, *///%/$]; [const -> .CHAR, *///%/$]; [const -> .STR, *///%/$]; [num_const -> .INT10, *///%/$]; [num_const -> .INT8, *///%/$]; [num_const -> .INT16, *///%/$]}
+goto(126, -)	{[value' -> -.item value', ;]}	165	{[value' -> -.item value', ;]; [item -> .factor item', +/-/$]; [factor -> .( value ), *///%/$]; [factor -> .id call_function, *///%/$]; [factor -> .const, *///%/$]; [const -> .num_const, *///%/$]; [const -> .FLOAT, *///%/$]; [const -> .CHAR, *///%/$]; [const -> .STR, *///%/$]; [num_const -> .INT10, *///%/$]; [num_const -> .INT8, *///%/$]; [num_const -> .INT16, *///%/$]}
+goto(126, $)	{[value' -> $., ;]}	166	{[value' -> $., ;]}
+goto(128, value')	{[value' -> + item value'., $/>/>=/}	167	{[value' -> + item value'., $/>/>=/}
+goto(128, +)	{[value' -> +.item value', $/>/>=/	98	 
+goto(128, -)	{[value' -> -.item value', $/>/>=/	99	 
+goto(128, $)	{[value' -> $., $/>/>=/}	100	 
+goto(129, value')	{[value' -> - item value'., $/>/>=/}	168	{[value' -> - item value'., $/>/>=/}
+goto(129, +)	{[value' -> +.item value', $/>/>=/	98	 
+goto(129, -)	{[value' -> -.item value', $/>/>=/	99	 
+goto(129, $)	{[value' -> $., $/>/>=/}	100	 
+goto(130, item')	{[item' -> * factor item'., +/-/$]}	169	{[item' -> * factor item'., +/-/$]}
+goto(130, *)	{[item' -> *.factor item', +/-/$]}	102	 
+goto(130, /)	{[item' -> /.factor item', +/-/$]}	103	 
+goto(130, %)	{[item' -> %.factor item', +/-/$]}	104	 
+goto(130, $)	{[item' -> $., +/-/$]}	105	 
+goto(131, item')	{[item' -> / factor item'., +/-/$]}	170	{[item' -> / factor item'., +/-/$]}
+goto(131, *)	{[item' -> *.factor item', +/-/$]}	102	 
+goto(131, /)	{[item' -> /.factor item', +/-/$]}	103	 
+goto(131, %)	{[item' -> %.factor item', +/-/$]}	104	 
+goto(131, $)	{[item' -> $., +/-/$]}	105	 
+goto(132, item')	{[item' -> % factor item'., +/-/$]}	171	{[item' -> % factor item'., +/-/$]}
+goto(132, *)	{[item' -> *.factor item', +/-/$]}	102	 
+goto(132, /)	{[item' -> /.factor item', +/-/$]}	103	 
+goto(132, %)	{[item' -> %.factor item', +/-/$]}	104	 
+goto(132, $)	{[item' -> $., +/-/$]}	105	 
+goto(135, item)	{[value' -> + item.value', )]}	172	{[value' -> + item.value', )]; [value' -> .+ item value', )]; [value' -> .- item value', )]; [value' -> .$, )]}
+goto(135, factor)	{[item -> factor.item', +/-/$]}	53	 
+goto(135, ()	{[factor -> (.value ), *///%/$]}	54	 
+goto(135, id)	{[factor -> id.call_function, *///%/$]}	55	 
+goto(135, const)	{[factor -> const., *///%/$]}	56	 
+goto(135, num_const)	{[const -> num_const., *///%/$]}	57	 
+goto(135, FLOAT)	{[const -> FLOAT., *///%/$]}	58	 
+goto(135, CHAR)	{[const -> CHAR., *///%/$]}	59	 
+goto(135, STR)	{[const -> STR., *///%/$]}	60	 
+goto(135, INT10)	{[num_const -> INT10., *///%/$]}	61	 
+goto(135, INT8)	{[num_const -> INT8., *///%/$]}	62	 
+goto(135, INT16)	{[num_const -> INT16., *///%/$]}	63	 
+goto(136, item)	{[value' -> - item.value', )]}	173	{[value' -> - item.value', )]; [value' -> .+ item value', )]; [value' -> .- item value', )]; [value' -> .$, )]}
+goto(136, factor)	{[item -> factor.item', +/-/$]}	53	 
+goto(136, ()	{[factor -> (.value ), *///%/$]}	54	 
+goto(136, id)	{[factor -> id.call_function, *///%/$]}	55	 
+goto(136, const)	{[factor -> const., *///%/$]}	56	 
+goto(136, num_const)	{[const -> num_const., *///%/$]}	57	 
+goto(136, FLOAT)	{[const -> FLOAT., *///%/$]}	58	 
+goto(136, CHAR)	{[const -> CHAR., *///%/$]}	59	 
+goto(136, STR)	{[const -> STR., *///%/$]}	60	 
+goto(136, INT10)	{[num_const -> INT10., *///%/$]}	61	 
+goto(136, INT8)	{[num_const -> INT8., *///%/$]}	62	 
+goto(136, INT16)	{[num_const -> INT16., *///%/$]}	63	 
+goto(138, ))	{[call_function -> ( es )., *///%/$]}	174	{[call_function -> ( es )., *///%/$]}
+goto(139, isnull_es)	{[es -> isnull_expr isnull_es., )]}	175	{[es -> isnull_expr isnull_es., )]}
+goto(139, ,)	{[isnull_es -> ,.isnull_expr isnull_es, )]}	176	{[isnull_es -> ,.isnull_expr isnull_es, )]; [isnull_expr -> .expression, ,/$]; [isnull_expr -> .$, ,/$]; [expression -> .value operation, ,/$]; [value -> .item value', $/>/>=/ .factor item', +/-/$]; [factor -> .( value ), *///%/$]; [factor -> .id call_function, *///%/$]; [factor -> .const, *///%/$]; [const -> .num_const, *///%/$]; [const -> .FLOAT, *///%/$]; [const -> .CHAR, *///%/$]; [const -> .STR, *///%/$]; [num_const -> .INT10, *///%/$]; [num_const -> .INT8, *///%/$]; [num_const -> .INT16, *///%/$]}
+goto(139, $)	{[isnull_es -> $., )]}	177	{[isnull_es -> $., )]}
+goto(142, operation)	{[expression -> value operation., ,/$]}	178	{[expression -> value operation., ,/$]}
+goto(142, compare_op)	{[operation -> compare_op.value, ,/$]}	179	{[operation -> compare_op.value, ,/$]; [value -> .item value', ,/$]; [item -> .factor item', +/-/$]; [factor -> .( value ), *///%/$]; [factor -> .id call_function, *///%/$]; [factor -> .const, *///%/$]; [const -> .num_const, *///%/$]; [const -> .FLOAT, *///%/$]; [const -> .CHAR, *///%/$]; [const -> .STR, *///%/$]; [num_const -> .INT10, *///%/$]; [num_const -> .INT8, *///%/$]; [num_const -> .INT16, *///%/$]}
+goto(142, equal_op)	{[operation -> equal_op.value, ,/$]}	180	{[operation -> equal_op.value, ,/$]; [value -> .item value', ,/$]; [item -> .factor item', +/-/$]; [factor -> .( value ), *///%/$]; [factor -> .id call_function, *///%/$]; [factor -> .const, *///%/$]; [const -> .num_const, *///%/$]; [const -> .FLOAT, *///%/$]; [const -> .CHAR, *///%/$]; [const -> .STR, *///%/$]; [num_const -> .INT10, *///%/$]; [num_const -> .INT8, *///%/$]; [num_const -> .INT16, *///%/$]}
+goto(142, $)	{[operation -> $., ,/$]}	181	{[operation -> $., ,/$]}
+goto(142, >)	{[compare_op -> >., (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	85	 
+goto(142, >=)	{[compare_op -> >=., (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	86	 
+goto(142, <)	{[compare_op -> <., (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	87	 
+goto(142, <=)	{[compare_op -> <=., (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	88	 
+goto(142, ==)	{[compare_op -> ==., (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	89	 
+goto(142, !=)	{[compare_op -> !=., (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	90	 
+goto(142, =)	{[equal_op -> =., (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	91	 
+goto(142, +=)	{[equal_op -> +=., (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	92	 
+goto(142, -=)	{[equal_op -> -=., (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	93	 
+goto(142, *=)	{[equal_op -> *=., (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	94	 
+goto(142, /=)	{[equal_op -> /=., (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	95	 
+goto(142, %=)	{[equal_op -> %=., (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	96	 
+goto(143, ;)	{[define_stmt -> type id init vars ;., $/int/short/long/char/float/double/void/unsigned]}	182	{[define_stmt -> type id init vars ;., $/int/short/long/char/float/double/void/unsigned]}
+goto(144, id)	{[vars -> , id.init vars, ;]}	183	{[vars -> , id.init vars, ;]; [init -> .= expression, ,/$]; [init -> .$, ,/$]}
+goto(147, block_stmt)	{[iteration_stmt -> while ( logical_expression ) block_stmt., $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	184	{[iteration_stmt -> while ( logical_expression ) block_stmt., $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}
+goto(147, {)	{[block_stmt -> {.stmts }, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	185	{[block_stmt -> {.stmts }, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [stmts -> .stmt stmts, }]; [stmts -> .$, }]; [stmt -> .assign_stmt, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [stmt -> .jump_stmt, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [stmt -> .iteration_stmt, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [stmt -> .branch_stmt, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [assign_stmt -> .expression ;, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [jump_stmt -> .continue ;, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [jump_stmt -> .break ;, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [jump_stmt -> .return isnull_expr ;, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [iteration_stmt -> .while ( logical_expression ) block_stmt, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [iteration_stmt -> .for ( isnull_expr ; isnull_expr ; isnull_expr ) block_stmt, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [iteration_stmt -> .do block_stmt while ( logical_expression ) ;, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [branch_stmt -> .if ( logical_expression ) block_stmt result, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [branch_stmt -> .switch ( id ) { case_stmt case_stmts default_stmt }, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [expression -> .value operation, ;]; [value -> .item value', $/>/>=/ .factor item', +/-/$]; [factor -> .( value ), *///%/$]; [factor -> .id call_function, *///%/$]; [factor -> .const, *///%/$]; [const -> .num_const, *///%/$]; [const -> .FLOAT, *///%/$]; [const -> .CHAR, *///%/$]; [const -> .STR, *///%/$]; [num_const -> .INT10, *///%/$]; [num_const -> .INT8, *///%/$]; [num_const -> .INT16, *///%/$]}
+goto(148, bool_expression)	{[logical_expression -> ! expression bool_expression., )]}	186	{[logical_expression -> ! expression bool_expression., )]}
+goto(148, lop)	{[bool_expression -> lop.expression bool_expression, )]}	150	 
+goto(148, $)	{[bool_expression -> $., )]}	151	 
+goto(148, &&)	{[lop -> &&., (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	152	 
+goto(148, ||)	{[lop -> ||., (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	153	 
+goto(150, expression)	{[bool_expression -> lop expression.bool_expression, )]}	187	{[bool_expression -> lop expression.bool_expression, )]; [bool_expression -> .lop expression bool_expression, )]; [bool_expression -> .$, )]; [lop -> .&&, (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [lop -> .||, (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}
+goto(150, value)	{[expression -> value.operation, $/&&/||]}	119	 
+goto(150, item)	{[value -> item.value', $/>/>=/	52	 
+goto(150, factor)	{[item -> factor.item', +/-/$]}	53	 
+goto(150, ()	{[factor -> (.value ), *///%/$]}	54	 
+goto(150, id)	{[factor -> id.call_function, *///%/$]}	55	 
+goto(150, const)	{[factor -> const., *///%/$]}	56	 
+goto(150, num_const)	{[const -> num_const., *///%/$]}	57	 
+goto(150, FLOAT)	{[const -> FLOAT., *///%/$]}	58	 
+goto(150, CHAR)	{[const -> CHAR., *///%/$]}	59	 
+goto(150, STR)	{[const -> STR., *///%/$]}	60	 
+goto(150, INT10)	{[num_const -> INT10., *///%/$]}	61	 
+goto(150, INT8)	{[num_const -> INT8., *///%/$]}	62	 
+goto(150, INT16)	{[num_const -> INT16., *///%/$]}	63	 
+goto(155, value)	{[operation -> compare_op value., $/&&/||]}	188	{[operation -> compare_op value., $/&&/||]}
+goto(155, item)	{[value -> item.value', $/&&/||]}	189	{[value -> item.value', $/&&/||]; [value' -> .+ item value', $/&&/||]; [value' -> .- item value', $/&&/||]; [value' -> .$, $/&&/||]}
+goto(155, factor)	{[item -> factor.item', +/-/$]}	53	 
+goto(155, ()	{[factor -> (.value ), *///%/$]}	54	 
+goto(155, id)	{[factor -> id.call_function, *///%/$]}	55	 
+goto(155, const)	{[factor -> const., *///%/$]}	56	 
+goto(155, num_const)	{[const -> num_const., *///%/$]}	57	 
+goto(155, FLOAT)	{[const -> FLOAT., *///%/$]}	58	 
+goto(155, CHAR)	{[const -> CHAR., *///%/$]}	59	 
+goto(155, STR)	{[const -> STR., *///%/$]}	60	 
+goto(155, INT10)	{[num_const -> INT10., *///%/$]}	61	 
+goto(155, INT8)	{[num_const -> INT8., *///%/$]}	62	 
+goto(155, INT16)	{[num_const -> INT16., *///%/$]}	63	 
+goto(156, value)	{[operation -> equal_op value., $/&&/||]}	190	{[operation -> equal_op value., $/&&/||]}
+goto(156, item)	{[value -> item.value', $/&&/||]}	189	 
+goto(156, factor)	{[item -> factor.item', +/-/$]}	53	 
+goto(156, ()	{[factor -> (.value ), *///%/$]}	54	 
+goto(156, id)	{[factor -> id.call_function, *///%/$]}	55	 
+goto(156, const)	{[factor -> const., *///%/$]}	56	 
+goto(156, num_const)	{[const -> num_const., *///%/$]}	57	 
+goto(156, FLOAT)	{[const -> FLOAT., *///%/$]}	58	 
+goto(156, CHAR)	{[const -> CHAR., *///%/$]}	59	 
+goto(156, STR)	{[const -> STR., *///%/$]}	60	 
+goto(156, INT10)	{[num_const -> INT10., *///%/$]}	61	 
+goto(156, INT8)	{[num_const -> INT8., *///%/$]}	62	 
+goto(156, INT16)	{[num_const -> INT16., *///%/$]}	63	 
+goto(158, isnull_expr)	{[iteration_stmt -> for ( isnull_expr ; isnull_expr.; isnull_expr ) block_stmt, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	191	{[iteration_stmt -> for ( isnull_expr ; isnull_expr.; isnull_expr ) block_stmt, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}
+goto(158, expression)	{[isnull_expr -> expression., ;]}	73	 
+goto(158, $)	{[isnull_expr -> $., ;]}	74	 
+goto(158, value)	{[expression -> value.operation, ;]}	51	 
+goto(158, item)	{[value -> item.value', $/>/>=/	52	 
+goto(158, factor)	{[item -> factor.item', +/-/$]}	53	 
+goto(158, ()	{[factor -> (.value ), *///%/$]}	54	 
+goto(158, id)	{[factor -> id.call_function, *///%/$]}	55	 
+goto(158, const)	{[factor -> const., *///%/$]}	56	 
+goto(158, num_const)	{[const -> num_const., *///%/$]}	57	 
+goto(158, FLOAT)	{[const -> FLOAT., *///%/$]}	58	 
+goto(158, CHAR)	{[const -> CHAR., *///%/$]}	59	 
+goto(158, STR)	{[const -> STR., *///%/$]}	60	 
+goto(158, INT10)	{[num_const -> INT10., *///%/$]}	61	 
+goto(158, INT8)	{[num_const -> INT8., *///%/$]}	62	 
+goto(158, INT16)	{[num_const -> INT16., *///%/$]}	63	 
+goto(159, logical_expression)	{[iteration_stmt -> do block_stmt while ( logical_expression.) ;, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	192	{[iteration_stmt -> do block_stmt while ( logical_expression.) ;, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}
+goto(159, !)	{[logical_expression -> !.expression bool_expression, )]}	117	 
+goto(159, expression)	{[logical_expression -> expression.bool_expression, )]}	118	 
+goto(159, value)	{[expression -> value.operation, $/&&/||]}	119	 
+goto(159, item)	{[value -> item.value', $/>/>=/	52	 
+goto(159, factor)	{[item -> factor.item', +/-/$]}	53	 
+goto(159, ()	{[factor -> (.value ), *///%/$]}	54	 
+goto(159, id)	{[factor -> id.call_function, *///%/$]}	55	 
+goto(159, const)	{[factor -> const., *///%/$]}	56	 
+goto(159, num_const)	{[const -> num_const., *///%/$]}	57	 
+goto(159, FLOAT)	{[const -> FLOAT., *///%/$]}	58	 
+goto(159, CHAR)	{[const -> CHAR., *///%/$]}	59	 
+goto(159, STR)	{[const -> STR., *///%/$]}	60	 
+goto(159, INT10)	{[num_const -> INT10., *///%/$]}	61	 
+goto(159, INT8)	{[num_const -> INT8., *///%/$]}	62	 
+goto(159, INT16)	{[num_const -> INT16., *///%/$]}	63	 
+goto(161, block_stmt)	{[branch_stmt -> if ( logical_expression ) block_stmt.result, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	193	{[branch_stmt -> if ( logical_expression ) block_stmt.result, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [result -> .else block_stmt, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [result -> .$, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}
+goto(161, {)	{[block_stmt -> {.stmts }, else/$]}	194	{[block_stmt -> {.stmts }, else/$]; [stmts -> .stmt stmts, }]; [stmts -> .$, }]; [stmt -> .assign_stmt, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [stmt -> .jump_stmt, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [stmt -> .iteration_stmt, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [stmt -> .branch_stmt, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [assign_stmt -> .expression ;, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [jump_stmt -> .continue ;, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [jump_stmt -> .break ;, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [jump_stmt -> .return isnull_expr ;, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [iteration_stmt -> .while ( logical_expression ) block_stmt, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [iteration_stmt -> .for ( isnull_expr ; isnull_expr ; isnull_expr ) block_stmt, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [iteration_stmt -> .do block_stmt while ( logical_expression ) ;, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [branch_stmt -> .if ( logical_expression ) block_stmt result, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [branch_stmt -> .switch ( id ) { case_stmt case_stmts default_stmt }, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [expression -> .value operation, ;]; [value -> .item value', $/>/>=/ .factor item', +/-/$]; [factor -> .( value ), *///%/$]; [factor -> .id call_function, *///%/$]; [factor -> .const, *///%/$]; [const -> .num_const, *///%/$]; [const -> .FLOAT, *///%/$]; [const -> .CHAR, *///%/$]; [const -> .STR, *///%/$]; [num_const -> .INT10, *///%/$]; [num_const -> .INT8, *///%/$]; [num_const -> .INT16, *///%/$]}
+goto(162, {)	{[branch_stmt -> switch ( id ) {.case_stmt case_stmts default_stmt }, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	195	{[branch_stmt -> switch ( id ) {.case_stmt case_stmts default_stmt }, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [case_stmt -> .case const : stmts, $/case]}
+goto(164, item)	{[value' -> + item.value', ;]}	196	{[value' -> + item.value', ;]; [value' -> .+ item value', ;]; [value' -> .- item value', ;]; [value' -> .$, ;]}
+goto(164, factor)	{[item -> factor.item', +/-/$]}	53	 
+goto(164, ()	{[factor -> (.value ), *///%/$]}	54	 
+goto(164, id)	{[factor -> id.call_function, *///%/$]}	55	 
+goto(164, const)	{[factor -> const., *///%/$]}	56	 
+goto(164, num_const)	{[const -> num_const., *///%/$]}	57	 
+goto(164, FLOAT)	{[const -> FLOAT., *///%/$]}	58	 
+goto(164, CHAR)	{[const -> CHAR., *///%/$]}	59	 
+goto(164, STR)	{[const -> STR., *///%/$]}	60	 
+goto(164, INT10)	{[num_const -> INT10., *///%/$]}	61	 
+goto(164, INT8)	{[num_const -> INT8., *///%/$]}	62	 
+goto(164, INT16)	{[num_const -> INT16., *///%/$]}	63	 
+goto(165, item)	{[value' -> - item.value', ;]}	197	{[value' -> - item.value', ;]; [value' -> .+ item value', ;]; [value' -> .- item value', ;]; [value' -> .$, ;]}
+goto(165, factor)	{[item -> factor.item', +/-/$]}	53	 
+goto(165, ()	{[factor -> (.value ), *///%/$]}	54	 
+goto(165, id)	{[factor -> id.call_function, *///%/$]}	55	 
+goto(165, const)	{[factor -> const., *///%/$]}	56	 
+goto(165, num_const)	{[const -> num_const., *///%/$]}	57	 
+goto(165, FLOAT)	{[const -> FLOAT., *///%/$]}	58	 
+goto(165, CHAR)	{[const -> CHAR., *///%/$]}	59	 
+goto(165, STR)	{[const -> STR., *///%/$]}	60	 
+goto(165, INT10)	{[num_const -> INT10., *///%/$]}	61	 
+goto(165, INT8)	{[num_const -> INT8., *///%/$]}	62	 
+goto(165, INT16)	{[num_const -> INT16., *///%/$]}	63	 
+goto(172, value')	{[value' -> + item value'., )]}	198	{[value' -> + item value'., )]}
+goto(172, +)	{[value' -> +.item value', )]}	135	 
+goto(172, -)	{[value' -> -.item value', )]}	136	 
+goto(172, $)	{[value' -> $., )]}	137	 
+goto(173, value')	{[value' -> - item value'., )]}	199	{[value' -> - item value'., )]}
+goto(173, +)	{[value' -> +.item value', )]}	135	 
+goto(173, -)	{[value' -> -.item value', )]}	136	 
+goto(173, $)	{[value' -> $., )]}	137	 
+goto(176, isnull_expr)	{[isnull_es -> , isnull_expr.isnull_es, )]}	200	{[isnull_es -> , isnull_expr.isnull_es, )]; [isnull_es -> ., isnull_expr isnull_es, )]; [isnull_es -> .$, )]}
+goto(176, expression)	{[isnull_expr -> expression., ,/$]}	140	 
+goto(176, $)	{[isnull_expr -> $., ,/$]}	141	 
+goto(176, value)	{[expression -> value.operation, ,/$]}	142	 
+goto(176, item)	{[value -> item.value', $/>/>=/	52	 
+goto(176, factor)	{[item -> factor.item', +/-/$]}	53	 
+goto(176, ()	{[factor -> (.value ), *///%/$]}	54	 
+goto(176, id)	{[factor -> id.call_function, *///%/$]}	55	 
+goto(176, const)	{[factor -> const., *///%/$]}	56	 
+goto(176, num_const)	{[const -> num_const., *///%/$]}	57	 
+goto(176, FLOAT)	{[const -> FLOAT., *///%/$]}	58	 
+goto(176, CHAR)	{[const -> CHAR., *///%/$]}	59	 
+goto(176, STR)	{[const -> STR., *///%/$]}	60	 
+goto(176, INT10)	{[num_const -> INT10., *///%/$]}	61	 
+goto(176, INT8)	{[num_const -> INT8., *///%/$]}	62	 
+goto(176, INT16)	{[num_const -> INT16., *///%/$]}	63	 
+goto(179, value)	{[operation -> compare_op value., ,/$]}	201	{[operation -> compare_op value., ,/$]}
+goto(179, item)	{[value -> item.value', ,/$]}	202	{[value -> item.value', ,/$]; [value' -> .+ item value', ,/$]; [value' -> .- item value', ,/$]; [value' -> .$, ,/$]}
+goto(179, factor)	{[item -> factor.item', +/-/$]}	53	 
+goto(179, ()	{[factor -> (.value ), *///%/$]}	54	 
+goto(179, id)	{[factor -> id.call_function, *///%/$]}	55	 
+goto(179, const)	{[factor -> const., *///%/$]}	56	 
+goto(179, num_const)	{[const -> num_const., *///%/$]}	57	 
+goto(179, FLOAT)	{[const -> FLOAT., *///%/$]}	58	 
+goto(179, CHAR)	{[const -> CHAR., *///%/$]}	59	 
+goto(179, STR)	{[const -> STR., *///%/$]}	60	 
+goto(179, INT10)	{[num_const -> INT10., *///%/$]}	61	 
+goto(179, INT8)	{[num_const -> INT8., *///%/$]}	62	 
+goto(179, INT16)	{[num_const -> INT16., *///%/$]}	63	 
+goto(180, value)	{[operation -> equal_op value., ,/$]}	203	{[operation -> equal_op value., ,/$]}
+goto(180, item)	{[value -> item.value', ,/$]}	202	 
+goto(180, factor)	{[item -> factor.item', +/-/$]}	53	 
+goto(180, ()	{[factor -> (.value ), *///%/$]}	54	 
+goto(180, id)	{[factor -> id.call_function, *///%/$]}	55	 
+goto(180, const)	{[factor -> const., *///%/$]}	56	 
+goto(180, num_const)	{[const -> num_const., *///%/$]}	57	 
+goto(180, FLOAT)	{[const -> FLOAT., *///%/$]}	58	 
+goto(180, CHAR)	{[const -> CHAR., *///%/$]}	59	 
+goto(180, STR)	{[const -> STR., *///%/$]}	60	 
+goto(180, INT10)	{[num_const -> INT10., *///%/$]}	61	 
+goto(180, INT8)	{[num_const -> INT8., *///%/$]}	62	 
+goto(180, INT16)	{[num_const -> INT16., *///%/$]}	63	 
+goto(183, init)	{[vars -> , id init.vars, ;]}	204	{[vars -> , id init.vars, ;]; [vars -> ., id init vars, ;]; [vars -> .$, ;]}
+goto(183, =)	{[init -> =.expression, ,/$]}	112	 
+goto(183, $)	{[init -> $., ,/$]}	113	 
+goto(185, stmts)	{[block_stmt -> { stmts.}, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	205	{[block_stmt -> { stmts.}, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}
+goto(185, stmt)	{[stmts -> stmt.stmts, }]}	36	 
+goto(185, $)	{[stmts -> $., }]}	37	 
+goto(185, assign_stmt)	{[stmt -> assign_stmt., $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	38	 
+goto(185, jump_stmt)	{[stmt -> jump_stmt., $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	39	 
+goto(185, iteration_stmt)	{[stmt -> iteration_stmt., $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	40	 
+goto(185, branch_stmt)	{[stmt -> branch_stmt., $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	41	 
+goto(185, expression)	{[assign_stmt -> expression.;, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	42	 
+goto(185, continue)	{[jump_stmt -> continue.;, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	43	 
+goto(185, break)	{[jump_stmt -> break.;, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	44	 
+goto(185, return)	{[jump_stmt -> return.isnull_expr ;, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	45	 
+goto(185, while)	{[iteration_stmt -> while.( logical_expression ) block_stmt, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	46	 
+goto(185, for)	{[iteration_stmt -> for.( isnull_expr ; isnull_expr ; isnull_expr ) block_stmt, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	47	 
+goto(185, do)	{[iteration_stmt -> do.block_stmt while ( logical_expression ) ;, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	48	 
+goto(185, if)	{[branch_stmt -> if.( logical_expression ) block_stmt result, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	49	 
+goto(185, switch)	{[branch_stmt -> switch.( id ) { case_stmt case_stmts default_stmt }, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	50	 
+goto(185, value)	{[expression -> value.operation, ;]}	51	 
+goto(185, item)	{[value -> item.value', $/>/>=/	52	 
+goto(185, factor)	{[item -> factor.item', +/-/$]}	53	 
+goto(185, ()	{[factor -> (.value ), *///%/$]}	54	 
+goto(185, id)	{[factor -> id.call_function, *///%/$]}	55	 
+goto(185, const)	{[factor -> const., *///%/$]}	56	 
+goto(185, num_const)	{[const -> num_const., *///%/$]}	57	 
+goto(185, FLOAT)	{[const -> FLOAT., *///%/$]}	58	 
+goto(185, CHAR)	{[const -> CHAR., *///%/$]}	59	 
+goto(185, STR)	{[const -> STR., *///%/$]}	60	 
+goto(185, INT10)	{[num_const -> INT10., *///%/$]}	61	 
+goto(185, INT8)	{[num_const -> INT8., *///%/$]}	62	 
+goto(185, INT16)	{[num_const -> INT16., *///%/$]}	63	 
+goto(187, bool_expression)	{[bool_expression -> lop expression bool_expression., )]}	206	{[bool_expression -> lop expression bool_expression., )]}
+goto(187, lop)	{[bool_expression -> lop.expression bool_expression, )]}	150	 
+goto(187, $)	{[bool_expression -> $., )]}	151	 
+goto(187, &&)	{[lop -> &&., (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	152	 
+goto(187, ||)	{[lop -> ||., (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	153	 
+goto(189, value')	{[value -> item value'., $/&&/||]}	207	{[value -> item value'., $/&&/||]}
+goto(189, +)	{[value' -> +.item value', $/&&/||]}	208	{[value' -> +.item value', $/&&/||]; [item -> .factor item', +/-/$]; [factor -> .( value ), *///%/$]; [factor -> .id call_function, *///%/$]; [factor -> .const, *///%/$]; [const -> .num_const, *///%/$]; [const -> .FLOAT, *///%/$]; [const -> .CHAR, *///%/$]; [const -> .STR, *///%/$]; [num_const -> .INT10, *///%/$]; [num_const -> .INT8, *///%/$]; [num_const -> .INT16, *///%/$]}
+goto(189, -)	{[value' -> -.item value', $/&&/||]}	209	{[value' -> -.item value', $/&&/||]; [item -> .factor item', +/-/$]; [factor -> .( value ), *///%/$]; [factor -> .id call_function, *///%/$]; [factor -> .const, *///%/$]; [const -> .num_const, *///%/$]; [const -> .FLOAT, *///%/$]; [const -> .CHAR, *///%/$]; [const -> .STR, *///%/$]; [num_const -> .INT10, *///%/$]; [num_const -> .INT8, *///%/$]; [num_const -> .INT16, *///%/$]}
+goto(189, $)	{[value' -> $., $/&&/||]}	210	{[value' -> $., $/&&/||]}
+goto(191, ;)	{[iteration_stmt -> for ( isnull_expr ; isnull_expr ;.isnull_expr ) block_stmt, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	211	{[iteration_stmt -> for ( isnull_expr ; isnull_expr ;.isnull_expr ) block_stmt, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [isnull_expr -> .expression, )]; [isnull_expr -> .$, )]; [expression -> .value operation, )]; [value -> .item value', $/>/>=/ .factor item', +/-/$]; [factor -> .( value ), *///%/$]; [factor -> .id call_function, *///%/$]; [factor -> .const, *///%/$]; [const -> .num_const, *///%/$]; [const -> .FLOAT, *///%/$]; [const -> .CHAR, *///%/$]; [const -> .STR, *///%/$]; [num_const -> .INT10, *///%/$]; [num_const -> .INT8, *///%/$]; [num_const -> .INT16, *///%/$]}
+goto(192, ))	{[iteration_stmt -> do block_stmt while ( logical_expression ).;, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	212	{[iteration_stmt -> do block_stmt while ( logical_expression ).;, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}
+goto(193, result)	{[branch_stmt -> if ( logical_expression ) block_stmt result., $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	213	{[branch_stmt -> if ( logical_expression ) block_stmt result., $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}
+goto(193, else)	{[result -> else.block_stmt, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	214	{[result -> else.block_stmt, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [block_stmt -> .{ stmts }, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}
+goto(193, $)	{[result -> $., $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	215	{[result -> $., $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}
+goto(194, stmts)	{[block_stmt -> { stmts.}, else/$]}	216	{[block_stmt -> { stmts.}, else/$]}
+goto(194, stmt)	{[stmts -> stmt.stmts, }]}	36	 
+goto(194, $)	{[stmts -> $., }]}	37	 
+goto(194, assign_stmt)	{[stmt -> assign_stmt., $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	38	 
+goto(194, jump_stmt)	{[stmt -> jump_stmt., $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	39	 
+goto(194, iteration_stmt)	{[stmt -> iteration_stmt., $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	40	 
+goto(194, branch_stmt)	{[stmt -> branch_stmt., $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	41	 
+goto(194, expression)	{[assign_stmt -> expression.;, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	42	 
+goto(194, continue)	{[jump_stmt -> continue.;, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	43	 
+goto(194, break)	{[jump_stmt -> break.;, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	44	 
+goto(194, return)	{[jump_stmt -> return.isnull_expr ;, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	45	 
+goto(194, while)	{[iteration_stmt -> while.( logical_expression ) block_stmt, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	46	 
+goto(194, for)	{[iteration_stmt -> for.( isnull_expr ; isnull_expr ; isnull_expr ) block_stmt, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	47	 
+goto(194, do)	{[iteration_stmt -> do.block_stmt while ( logical_expression ) ;, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	48	 
+goto(194, if)	{[branch_stmt -> if.( logical_expression ) block_stmt result, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	49	 
+goto(194, switch)	{[branch_stmt -> switch.( id ) { case_stmt case_stmts default_stmt }, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	50	 
+goto(194, value)	{[expression -> value.operation, ;]}	51	 
+goto(194, item)	{[value -> item.value', $/>/>=/	52	 
+goto(194, factor)	{[item -> factor.item', +/-/$]}	53	 
+goto(194, ()	{[factor -> (.value ), *///%/$]}	54	 
+goto(194, id)	{[factor -> id.call_function, *///%/$]}	55	 
+goto(194, const)	{[factor -> const., *///%/$]}	56	 
+goto(194, num_const)	{[const -> num_const., *///%/$]}	57	 
+goto(194, FLOAT)	{[const -> FLOAT., *///%/$]}	58	 
+goto(194, CHAR)	{[const -> CHAR., *///%/$]}	59	 
+goto(194, STR)	{[const -> STR., *///%/$]}	60	 
+goto(194, INT10)	{[num_const -> INT10., *///%/$]}	61	 
+goto(194, INT8)	{[num_const -> INT8., *///%/$]}	62	 
+goto(194, INT16)	{[num_const -> INT16., *///%/$]}	63	 
+goto(195, case_stmt)	{[branch_stmt -> switch ( id ) { case_stmt.case_stmts default_stmt }, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	217	{[branch_stmt -> switch ( id ) { case_stmt.case_stmts default_stmt }, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [case_stmts -> .case_stmt case_stmts, default]; [case_stmts -> .$, default]; [case_stmt -> .case const : stmts, $/case]}
+goto(195, case)	{[case_stmt -> case.const : stmts, $/case]}	218	{[case_stmt -> case.const : stmts, $/case]; [const -> .num_const, :]; [const -> .FLOAT, :]; [const -> .CHAR, :]; [const -> .STR, :]; [num_const -> .INT10, :]; [num_const -> .INT8, :]; [num_const -> .INT16, :]}
+goto(196, value')	{[value' -> + item value'., ;]}	219	{[value' -> + item value'., ;]}
+goto(196, +)	{[value' -> +.item value', ;]}	164	 
+goto(196, -)	{[value' -> -.item value', ;]}	165	 
+goto(196, $)	{[value' -> $., ;]}	166	 
+goto(197, value')	{[value' -> - item value'., ;]}	220	{[value' -> - item value'., ;]}
+goto(197, +)	{[value' -> +.item value', ;]}	164	 
+goto(197, -)	{[value' -> -.item value', ;]}	165	 
+goto(197, $)	{[value' -> $., ;]}	166	 
+goto(200, isnull_es)	{[isnull_es -> , isnull_expr isnull_es., )]}	221	{[isnull_es -> , isnull_expr isnull_es., )]}
+goto(200, ,)	{[isnull_es -> ,.isnull_expr isnull_es, )]}	176	 
+goto(200, $)	{[isnull_es -> $., )]}	177	 
+goto(202, value')	{[value -> item value'., ,/$]}	222	{[value -> item value'., ,/$]}
+goto(202, +)	{[value' -> +.item value', ,/$]}	223	{[value' -> +.item value', ,/$]; [item -> .factor item', +/-/$]; [factor -> .( value ), *///%/$]; [factor -> .id call_function, *///%/$]; [factor -> .const, *///%/$]; [const -> .num_const, *///%/$]; [const -> .FLOAT, *///%/$]; [const -> .CHAR, *///%/$]; [const -> .STR, *///%/$]; [num_const -> .INT10, *///%/$]; [num_const -> .INT8, *///%/$]; [num_const -> .INT16, *///%/$]}
+goto(202, -)	{[value' -> -.item value', ,/$]}	224	{[value' -> -.item value', ,/$]; [item -> .factor item', +/-/$]; [factor -> .( value ), *///%/$]; [factor -> .id call_function, *///%/$]; [factor -> .const, *///%/$]; [const -> .num_const, *///%/$]; [const -> .FLOAT, *///%/$]; [const -> .CHAR, *///%/$]; [const -> .STR, *///%/$]; [num_const -> .INT10, *///%/$]; [num_const -> .INT8, *///%/$]; [num_const -> .INT16, *///%/$]}
+goto(202, $)	{[value' -> $., ,/$]}	225	{[value' -> $., ,/$]}
+goto(204, vars)	{[vars -> , id init vars., ;]}	226	{[vars -> , id init vars., ;]}
+goto(204, ,)	{[vars -> ,.id init vars, ;]}	144	 
+goto(204, $)	{[vars -> $., ;]}	145	 
+goto(205, })	{[block_stmt -> { stmts }., $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	227	{[block_stmt -> { stmts }., $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}
+goto(208, item)	{[value' -> + item.value', $/&&/||]}	228	{[value' -> + item.value', $/&&/||]; [value' -> .+ item value', $/&&/||]; [value' -> .- item value', $/&&/||]; [value' -> .$, $/&&/||]}
+goto(208, factor)	{[item -> factor.item', +/-/$]}	53	 
+goto(208, ()	{[factor -> (.value ), *///%/$]}	54	 
+goto(208, id)	{[factor -> id.call_function, *///%/$]}	55	 
+goto(208, const)	{[factor -> const., *///%/$]}	56	 
+goto(208, num_const)	{[const -> num_const., *///%/$]}	57	 
+goto(208, FLOAT)	{[const -> FLOAT., *///%/$]}	58	 
+goto(208, CHAR)	{[const -> CHAR., *///%/$]}	59	 
+goto(208, STR)	{[const -> STR., *///%/$]}	60	 
+goto(208, INT10)	{[num_const -> INT10., *///%/$]}	61	 
+goto(208, INT8)	{[num_const -> INT8., *///%/$]}	62	 
+goto(208, INT16)	{[num_const -> INT16., *///%/$]}	63	 
+goto(209, item)	{[value' -> - item.value', $/&&/||]}	229	{[value' -> - item.value', $/&&/||]; [value' -> .+ item value', $/&&/||]; [value' -> .- item value', $/&&/||]; [value' -> .$, $/&&/||]}
+goto(209, factor)	{[item -> factor.item', +/-/$]}	53	 
+goto(209, ()	{[factor -> (.value ), *///%/$]}	54	 
+goto(209, id)	{[factor -> id.call_function, *///%/$]}	55	 
+goto(209, const)	{[factor -> const., *///%/$]}	56	 
+goto(209, num_const)	{[const -> num_const., *///%/$]}	57	 
+goto(209, FLOAT)	{[const -> FLOAT., *///%/$]}	58	 
+goto(209, CHAR)	{[const -> CHAR., *///%/$]}	59	 
+goto(209, STR)	{[const -> STR., *///%/$]}	60	 
+goto(209, INT10)	{[num_const -> INT10., *///%/$]}	61	 
+goto(209, INT8)	{[num_const -> INT8., *///%/$]}	62	 
+goto(209, INT16)	{[num_const -> INT16., *///%/$]}	63	 
+goto(211, isnull_expr)	{[iteration_stmt -> for ( isnull_expr ; isnull_expr ; isnull_expr.) block_stmt, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	230	{[iteration_stmt -> for ( isnull_expr ; isnull_expr ; isnull_expr.) block_stmt, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}
+goto(211, expression)	{[isnull_expr -> expression., )]}	231	{[isnull_expr -> expression., )]}
+goto(211, $)	{[isnull_expr -> $., )]}	232	{[isnull_expr -> $., )]}
+goto(211, value)	{[expression -> value.operation, )]}	233	{[expression -> value.operation, )]; [operation -> .compare_op value, )]; [operation -> .equal_op value, )]; [operation -> .$, )]; [compare_op -> .>, (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [compare_op -> .>=, (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [compare_op -> .<, (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [compare_op -> .<=, (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [compare_op -> .==, (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [compare_op -> .!=, (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [equal_op -> .=, (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [equal_op -> .+=, (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [equal_op -> .-=, (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [equal_op -> .*=, (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [equal_op -> ./=, (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [equal_op -> .%=, (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}
+goto(211, item)	{[value -> item.value', $/>/>=/	52	 
+goto(211, factor)	{[item -> factor.item', +/-/$]}	53	 
+goto(211, ()	{[factor -> (.value ), *///%/$]}	54	 
+goto(211, id)	{[factor -> id.call_function, *///%/$]}	55	 
+goto(211, const)	{[factor -> const., *///%/$]}	56	 
+goto(211, num_const)	{[const -> num_const., *///%/$]}	57	 
+goto(211, FLOAT)	{[const -> FLOAT., *///%/$]}	58	 
+goto(211, CHAR)	{[const -> CHAR., *///%/$]}	59	 
+goto(211, STR)	{[const -> STR., *///%/$]}	60	 
+goto(211, INT10)	{[num_const -> INT10., *///%/$]}	61	 
+goto(211, INT8)	{[num_const -> INT8., *///%/$]}	62	 
+goto(211, INT16)	{[num_const -> INT16., *///%/$]}	63	 
+goto(212, ;)	{[iteration_stmt -> do block_stmt while ( logical_expression ) ;., $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	234	{[iteration_stmt -> do block_stmt while ( logical_expression ) ;., $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}
+goto(214, block_stmt)	{[result -> else block_stmt., $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	235	{[result -> else block_stmt., $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}
+goto(214, {)	{[block_stmt -> {.stmts }, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	185	 
+goto(216, })	{[block_stmt -> { stmts }., else/$]}	236	{[block_stmt -> { stmts }., else/$]}
+goto(217, case_stmts)	{[branch_stmt -> switch ( id ) { case_stmt case_stmts.default_stmt }, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	237	{[branch_stmt -> switch ( id ) { case_stmt case_stmts.default_stmt }, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [default_stmt -> .default : stmts, }]}
+goto(217, case_stmt)	{[case_stmts -> case_stmt.case_stmts, default]}	238	{[case_stmts -> case_stmt.case_stmts, default]; [case_stmts -> .case_stmt case_stmts, default]; [case_stmts -> .$, default]; [case_stmt -> .case const : stmts, $/case]}
+goto(217, $)	{[case_stmts -> $., default]}	239	{[case_stmts -> $., default]}
+goto(217, case)	{[case_stmt -> case.const : stmts, $/case]}	218	 
+goto(218, const)	{[case_stmt -> case const.: stmts, $/case]}	240	{[case_stmt -> case const.: stmts, $/case]}
+goto(218, num_const)	{[const -> num_const., :]}	241	{[const -> num_const., :]}
+goto(218, FLOAT)	{[const -> FLOAT., :]}	242	{[const -> FLOAT., :]}
+goto(218, CHAR)	{[const -> CHAR., :]}	243	{[const -> CHAR., :]}
+goto(218, STR)	{[const -> STR., :]}	244	{[const -> STR., :]}
+goto(218, INT10)	{[num_const -> INT10., :]}	245	{[num_const -> INT10., :]}
+goto(218, INT8)	{[num_const -> INT8., :]}	246	{[num_const -> INT8., :]}
+goto(218, INT16)	{[num_const -> INT16., :]}	247	{[num_const -> INT16., :]}
+goto(223, item)	{[value' -> + item.value', ,/$]}	248	{[value' -> + item.value', ,/$]; [value' -> .+ item value', ,/$]; [value' -> .- item value', ,/$]; [value' -> .$, ,/$]}
+goto(223, factor)	{[item -> factor.item', +/-/$]}	53	 
+goto(223, ()	{[factor -> (.value ), *///%/$]}	54	 
+goto(223, id)	{[factor -> id.call_function, *///%/$]}	55	 
+goto(223, const)	{[factor -> const., *///%/$]}	56	 
+goto(223, num_const)	{[const -> num_const., *///%/$]}	57	 
+goto(223, FLOAT)	{[const -> FLOAT., *///%/$]}	58	 
+goto(223, CHAR)	{[const -> CHAR., *///%/$]}	59	 
+goto(223, STR)	{[const -> STR., *///%/$]}	60	 
+goto(223, INT10)	{[num_const -> INT10., *///%/$]}	61	 
+goto(223, INT8)	{[num_const -> INT8., *///%/$]}	62	 
+goto(223, INT16)	{[num_const -> INT16., *///%/$]}	63	 
+goto(224, item)	{[value' -> - item.value', ,/$]}	249	{[value' -> - item.value', ,/$]; [value' -> .+ item value', ,/$]; [value' -> .- item value', ,/$]; [value' -> .$, ,/$]}
+goto(224, factor)	{[item -> factor.item', +/-/$]}	53	 
+goto(224, ()	{[factor -> (.value ), *///%/$]}	54	 
+goto(224, id)	{[factor -> id.call_function, *///%/$]}	55	 
+goto(224, const)	{[factor -> const., *///%/$]}	56	 
+goto(224, num_const)	{[const -> num_const., *///%/$]}	57	 
+goto(224, FLOAT)	{[const -> FLOAT., *///%/$]}	58	 
+goto(224, CHAR)	{[const -> CHAR., *///%/$]}	59	 
+goto(224, STR)	{[const -> STR., *///%/$]}	60	 
+goto(224, INT10)	{[num_const -> INT10., *///%/$]}	61	 
+goto(224, INT8)	{[num_const -> INT8., *///%/$]}	62	 
+goto(224, INT16)	{[num_const -> INT16., *///%/$]}	63	 
+goto(228, value')	{[value' -> + item value'., $/&&/||]}	250	{[value' -> + item value'., $/&&/||]}
+goto(228, +)	{[value' -> +.item value', $/&&/||]}	208	 
+goto(228, -)	{[value' -> -.item value', $/&&/||]}	209	 
+goto(228, $)	{[value' -> $., $/&&/||]}	210	 
+goto(229, value')	{[value' -> - item value'., $/&&/||]}	251	{[value' -> - item value'., $/&&/||]}
+goto(229, +)	{[value' -> +.item value', $/&&/||]}	208	 
+goto(229, -)	{[value' -> -.item value', $/&&/||]}	209	 
+goto(229, $)	{[value' -> $., $/&&/||]}	210	 
+goto(230, ))	{[iteration_stmt -> for ( isnull_expr ; isnull_expr ; isnull_expr ).block_stmt, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	252	{[iteration_stmt -> for ( isnull_expr ; isnull_expr ; isnull_expr ).block_stmt, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [block_stmt -> .{ stmts }, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}
+goto(233, operation)	{[expression -> value operation., )]}	253	{[expression -> value operation., )]}
+goto(233, compare_op)	{[operation -> compare_op.value, )]}	254	{[operation -> compare_op.value, )]; [value -> .item value', )]; [item -> .factor item', +/-/$]; [factor -> .( value ), *///%/$]; [factor -> .id call_function, *///%/$]; [factor -> .const, *///%/$]; [const -> .num_const, *///%/$]; [const -> .FLOAT, *///%/$]; [const -> .CHAR, *///%/$]; [const -> .STR, *///%/$]; [num_const -> .INT10, *///%/$]; [num_const -> .INT8, *///%/$]; [num_const -> .INT16, *///%/$]}
+goto(233, equal_op)	{[operation -> equal_op.value, )]}	255	{[operation -> equal_op.value, )]; [value -> .item value', )]; [item -> .factor item', +/-/$]; [factor -> .( value ), *///%/$]; [factor -> .id call_function, *///%/$]; [factor -> .const, *///%/$]; [const -> .num_const, *///%/$]; [const -> .FLOAT, *///%/$]; [const -> .CHAR, *///%/$]; [const -> .STR, *///%/$]; [num_const -> .INT10, *///%/$]; [num_const -> .INT8, *///%/$]; [num_const -> .INT16, *///%/$]}
+goto(233, $)	{[operation -> $., )]}	256	{[operation -> $., )]}
+goto(233, >)	{[compare_op -> >., (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	85	 
+goto(233, >=)	{[compare_op -> >=., (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	86	 
+goto(233, <)	{[compare_op -> <., (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	87	 
+goto(233, <=)	{[compare_op -> <=., (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	88	 
+goto(233, ==)	{[compare_op -> ==., (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	89	 
+goto(233, !=)	{[compare_op -> !=., (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	90	 
+goto(233, =)	{[equal_op -> =., (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	91	 
+goto(233, +=)	{[equal_op -> +=., (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	92	 
+goto(233, -=)	{[equal_op -> -=., (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	93	 
+goto(233, *=)	{[equal_op -> *=., (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	94	 
+goto(233, /=)	{[equal_op -> /=., (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	95	 
+goto(233, %=)	{[equal_op -> %=., (/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	96	 
+goto(237, default_stmt)	{[branch_stmt -> switch ( id ) { case_stmt case_stmts default_stmt.}, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	257	{[branch_stmt -> switch ( id ) { case_stmt case_stmts default_stmt.}, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}
+goto(237, default)	{[default_stmt -> default.: stmts, }]}	258	{[default_stmt -> default.: stmts, }]}
+goto(238, case_stmts)	{[case_stmts -> case_stmt case_stmts., default]}	259	{[case_stmts -> case_stmt case_stmts., default]}
+goto(238, case_stmt)	{[case_stmts -> case_stmt.case_stmts, default]}	238	 
+goto(238, $)	{[case_stmts -> $., default]}	239	 
+goto(238, case)	{[case_stmt -> case.const : stmts, $/case]}	218	 
+goto(240, :)	{[case_stmt -> case const :.stmts, $/case]}	260	{[case_stmt -> case const :.stmts, $/case]; [stmts -> .stmt stmts, $/case]; [stmts -> .$, $/case]; [stmt -> .assign_stmt, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [stmt -> .jump_stmt, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [stmt -> .iteration_stmt, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [stmt -> .branch_stmt, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [assign_stmt -> .expression ;, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [jump_stmt -> .continue ;, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [jump_stmt -> .break ;, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [jump_stmt -> .return isnull_expr ;, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [iteration_stmt -> .while ( logical_expression ) block_stmt, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [iteration_stmt -> .for ( isnull_expr ; isnull_expr ; isnull_expr ) block_stmt, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [iteration_stmt -> .do block_stmt while ( logical_expression ) ;, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [branch_stmt -> .if ( logical_expression ) block_stmt result, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [branch_stmt -> .switch ( id ) { case_stmt case_stmts default_stmt }, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [expression -> .value operation, ;]; [value -> .item value', $/>/>=/ .factor item', +/-/$]; [factor -> .( value ), *///%/$]; [factor -> .id call_function, *///%/$]; [factor -> .const, *///%/$]; [const -> .num_const, *///%/$]; [const -> .FLOAT, *///%/$]; [const -> .CHAR, *///%/$]; [const -> .STR, *///%/$]; [num_const -> .INT10, *///%/$]; [num_const -> .INT8, *///%/$]; [num_const -> .INT16, *///%/$]}
+goto(248, value')	{[value' -> + item value'., ,/$]}	261	{[value' -> + item value'., ,/$]}
+goto(248, +)	{[value' -> +.item value', ,/$]}	223	 
+goto(248, -)	{[value' -> -.item value', ,/$]}	224	 
+goto(248, $)	{[value' -> $., ,/$]}	225	 
+goto(249, value')	{[value' -> - item value'., ,/$]}	262	{[value' -> - item value'., ,/$]}
+goto(249, +)	{[value' -> +.item value', ,/$]}	223	 
+goto(249, -)	{[value' -> -.item value', ,/$]}	224	 
+goto(249, $)	{[value' -> $., ,/$]}	225	 
+goto(252, block_stmt)	{[iteration_stmt -> for ( isnull_expr ; isnull_expr ; isnull_expr ) block_stmt., $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	263	{[iteration_stmt -> for ( isnull_expr ; isnull_expr ; isnull_expr ) block_stmt., $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}
+goto(252, {)	{[block_stmt -> {.stmts }, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	185	 
+goto(254, value)	{[operation -> compare_op value., )]}	264	{[operation -> compare_op value., )]}
+goto(254, item)	{[value -> item.value', )]}	107	 
+goto(254, factor)	{[item -> factor.item', +/-/$]}	53	 
+goto(254, ()	{[factor -> (.value ), *///%/$]}	54	 
+goto(254, id)	{[factor -> id.call_function, *///%/$]}	55	 
+goto(254, const)	{[factor -> const., *///%/$]}	56	 
+goto(254, num_const)	{[const -> num_const., *///%/$]}	57	 
+goto(254, FLOAT)	{[const -> FLOAT., *///%/$]}	58	 
+goto(254, CHAR)	{[const -> CHAR., *///%/$]}	59	 
+goto(254, STR)	{[const -> STR., *///%/$]}	60	 
+goto(254, INT10)	{[num_const -> INT10., *///%/$]}	61	 
+goto(254, INT8)	{[num_const -> INT8., *///%/$]}	62	 
+goto(254, INT16)	{[num_const -> INT16., *///%/$]}	63	 
+goto(255, value)	{[operation -> equal_op value., )]}	265	{[operation -> equal_op value., )]}
+goto(255, item)	{[value -> item.value', )]}	107	 
+goto(255, factor)	{[item -> factor.item', +/-/$]}	53	 
+goto(255, ()	{[factor -> (.value ), *///%/$]}	54	 
+goto(255, id)	{[factor -> id.call_function, *///%/$]}	55	 
+goto(255, const)	{[factor -> const., *///%/$]}	56	 
+goto(255, num_const)	{[const -> num_const., *///%/$]}	57	 
+goto(255, FLOAT)	{[const -> FLOAT., *///%/$]}	58	 
+goto(255, CHAR)	{[const -> CHAR., *///%/$]}	59	 
+goto(255, STR)	{[const -> STR., *///%/$]}	60	 
+goto(255, INT10)	{[num_const -> INT10., *///%/$]}	61	 
+goto(255, INT8)	{[num_const -> INT8., *///%/$]}	62	 
+goto(255, INT16)	{[num_const -> INT16., *///%/$]}	63	 
+goto(257, })	{[branch_stmt -> switch ( id ) { case_stmt case_stmts default_stmt }., $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	266	{[branch_stmt -> switch ( id ) { case_stmt case_stmts default_stmt }., $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}
+goto(258, :)	{[default_stmt -> default :.stmts, }]}	267	{[default_stmt -> default :.stmts, }]; [stmts -> .stmt stmts, }]; [stmts -> .$, }]; [stmt -> .assign_stmt, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [stmt -> .jump_stmt, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [stmt -> .iteration_stmt, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [stmt -> .branch_stmt, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [assign_stmt -> .expression ;, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [jump_stmt -> .continue ;, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [jump_stmt -> .break ;, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [jump_stmt -> .return isnull_expr ;, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [iteration_stmt -> .while ( logical_expression ) block_stmt, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [iteration_stmt -> .for ( isnull_expr ; isnull_expr ; isnull_expr ) block_stmt, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [iteration_stmt -> .do block_stmt while ( logical_expression ) ;, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [branch_stmt -> .if ( logical_expression ) block_stmt result, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [branch_stmt -> .switch ( id ) { case_stmt case_stmts default_stmt }, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [expression -> .value operation, ;]; [value -> .item value', $/>/>=/ .factor item', +/-/$]; [factor -> .( value ), *///%/$]; [factor -> .id call_function, *///%/$]; [factor -> .const, *///%/$]; [const -> .num_const, *///%/$]; [const -> .FLOAT, *///%/$]; [const -> .CHAR, *///%/$]; [const -> .STR, *///%/$]; [num_const -> .INT10, *///%/$]; [num_const -> .INT8, *///%/$]; [num_const -> .INT16, *///%/$]}
+goto(260, stmts)	{[case_stmt -> case const : stmts., $/case]}	268	{[case_stmt -> case const : stmts., $/case]}
+goto(260, stmt)	{[stmts -> stmt.stmts, $/case]}	269	{[stmts -> stmt.stmts, $/case]; [stmts -> .stmt stmts, $/case]; [stmts -> .$, $/case]; [stmt -> .assign_stmt, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [stmt -> .jump_stmt, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [stmt -> .iteration_stmt, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [stmt -> .branch_stmt, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [assign_stmt -> .expression ;, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [jump_stmt -> .continue ;, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [jump_stmt -> .break ;, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [jump_stmt -> .return isnull_expr ;, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [iteration_stmt -> .while ( logical_expression ) block_stmt, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [iteration_stmt -> .for ( isnull_expr ; isnull_expr ; isnull_expr ) block_stmt, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [iteration_stmt -> .do block_stmt while ( logical_expression ) ;, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [branch_stmt -> .if ( logical_expression ) block_stmt result, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [branch_stmt -> .switch ( id ) { case_stmt case_stmts default_stmt }, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]; [expression -> .value operation, ;]; [value -> .item value', $/>/>=/ .factor item', +/-/$]; [factor -> .( value ), *///%/$]; [factor -> .id call_function, *///%/$]; [factor -> .const, *///%/$]; [const -> .num_const, *///%/$]; [const -> .FLOAT, *///%/$]; [const -> .CHAR, *///%/$]; [const -> .STR, *///%/$]; [num_const -> .INT10, *///%/$]; [num_const -> .INT8, *///%/$]; [num_const -> .INT16, *///%/$]}
+goto(260, $)	{[stmts -> $., $/case]}	270	{[stmts -> $., $/case]}
+goto(260, assign_stmt)	{[stmt -> assign_stmt., $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	38	 
+goto(260, jump_stmt)	{[stmt -> jump_stmt., $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	39	 
+goto(260, iteration_stmt)	{[stmt -> iteration_stmt., $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	40	 
+goto(260, branch_stmt)	{[stmt -> branch_stmt., $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	41	 
+goto(260, expression)	{[assign_stmt -> expression.;, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	42	 
+goto(260, continue)	{[jump_stmt -> continue.;, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	43	 
+goto(260, break)	{[jump_stmt -> break.;, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	44	 
+goto(260, return)	{[jump_stmt -> return.isnull_expr ;, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	45	 
+goto(260, while)	{[iteration_stmt -> while.( logical_expression ) block_stmt, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	46	 
+goto(260, for)	{[iteration_stmt -> for.( isnull_expr ; isnull_expr ; isnull_expr ) block_stmt, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	47	 
+goto(260, do)	{[iteration_stmt -> do.block_stmt while ( logical_expression ) ;, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	48	 
+goto(260, if)	{[branch_stmt -> if.( logical_expression ) block_stmt result, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	49	 
+goto(260, switch)	{[branch_stmt -> switch.( id ) { case_stmt case_stmts default_stmt }, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	50	 
+goto(260, value)	{[expression -> value.operation, ;]}	51	 
+goto(260, item)	{[value -> item.value', $/>/>=/	52	 
+goto(260, factor)	{[item -> factor.item', +/-/$]}	53	 
+goto(260, ()	{[factor -> (.value ), *///%/$]}	54	 
+goto(260, id)	{[factor -> id.call_function, *///%/$]}	55	 
+goto(260, const)	{[factor -> const., *///%/$]}	56	 
+goto(260, num_const)	{[const -> num_const., *///%/$]}	57	 
+goto(260, FLOAT)	{[const -> FLOAT., *///%/$]}	58	 
+goto(260, CHAR)	{[const -> CHAR., *///%/$]}	59	 
+goto(260, STR)	{[const -> STR., *///%/$]}	60	 
+goto(260, INT10)	{[num_const -> INT10., *///%/$]}	61	 
+goto(260, INT8)	{[num_const -> INT8., *///%/$]}	62	 
+goto(260, INT16)	{[num_const -> INT16., *///%/$]}	63	 
+goto(267, stmts)	{[default_stmt -> default : stmts., }]}	271	{[default_stmt -> default : stmts., }]}
+goto(267, stmt)	{[stmts -> stmt.stmts, }]}	36	 
+goto(267, $)	{[stmts -> $., }]}	37	 
+goto(267, assign_stmt)	{[stmt -> assign_stmt., $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	38	 
+goto(267, jump_stmt)	{[stmt -> jump_stmt., $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	39	 
+goto(267, iteration_stmt)	{[stmt -> iteration_stmt., $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	40	 
+goto(267, branch_stmt)	{[stmt -> branch_stmt., $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	41	 
+goto(267, expression)	{[assign_stmt -> expression.;, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	42	 
+goto(267, continue)	{[jump_stmt -> continue.;, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	43	 
+goto(267, break)	{[jump_stmt -> break.;, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	44	 
+goto(267, return)	{[jump_stmt -> return.isnull_expr ;, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	45	 
+goto(267, while)	{[iteration_stmt -> while.( logical_expression ) block_stmt, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	46	 
+goto(267, for)	{[iteration_stmt -> for.( isnull_expr ; isnull_expr ; isnull_expr ) block_stmt, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	47	 
+goto(267, do)	{[iteration_stmt -> do.block_stmt while ( logical_expression ) ;, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	48	 
+goto(267, if)	{[branch_stmt -> if.( logical_expression ) block_stmt result, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	49	 
+goto(267, switch)	{[branch_stmt -> switch.( id ) { case_stmt case_stmts default_stmt }, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	50	 
+goto(267, value)	{[expression -> value.operation, ;]}	51	 
+goto(267, item)	{[value -> item.value', $/>/>=/	52	 
+goto(267, factor)	{[item -> factor.item', +/-/$]}	53	 
+goto(267, ()	{[factor -> (.value ), *///%/$]}	54	 
+goto(267, id)	{[factor -> id.call_function, *///%/$]}	55	 
+goto(267, const)	{[factor -> const., *///%/$]}	56	 
+goto(267, num_const)	{[const -> num_const., *///%/$]}	57	 
+goto(267, FLOAT)	{[const -> FLOAT., *///%/$]}	58	 
+goto(267, CHAR)	{[const -> CHAR., *///%/$]}	59	 
+goto(267, STR)	{[const -> STR., *///%/$]}	60	 
+goto(267, INT10)	{[num_const -> INT10., *///%/$]}	61	 
+goto(267, INT8)	{[num_const -> INT8., *///%/$]}	62	 
+goto(267, INT16)	{[num_const -> INT16., *///%/$]}	63	 
+goto(269, stmts)	{[stmts -> stmt stmts., $/case]}	272	{[stmts -> stmt stmts., $/case]}
+goto(269, stmt)	{[stmts -> stmt.stmts, $/case]}	269	 
+goto(269, $)	{[stmts -> $., $/case]}	270	 
+goto(269, assign_stmt)	{[stmt -> assign_stmt., $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	38	 
+goto(269, jump_stmt)	{[stmt -> jump_stmt., $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	39	 
+goto(269, iteration_stmt)	{[stmt -> iteration_stmt., $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	40	 
+goto(269, branch_stmt)	{[stmt -> branch_stmt., $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	41	 
+goto(269, expression)	{[assign_stmt -> expression.;, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	42	 
+goto(269, continue)	{[jump_stmt -> continue.;, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	43	 
+goto(269, break)	{[jump_stmt -> break.;, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	44	 
+goto(269, return)	{[jump_stmt -> return.isnull_expr ;, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	45	 
+goto(269, while)	{[iteration_stmt -> while.( logical_expression ) block_stmt, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	46	 
+goto(269, for)	{[iteration_stmt -> for.( isnull_expr ; isnull_expr ; isnull_expr ) block_stmt, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	47	 
+goto(269, do)	{[iteration_stmt -> do.block_stmt while ( logical_expression ) ;, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	48	 
+goto(269, if)	{[branch_stmt -> if.( logical_expression ) block_stmt result, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	49	 
+goto(269, switch)	{[branch_stmt -> switch.( id ) { case_stmt case_stmts default_stmt }, $/continue/break/return/while/for/do/if/switch/(/id/FLOAT/CHAR/STR/INT10/INT8/INT16]}	50	 
+goto(269, value)	{[expression -> value.operation, ;]}	51	 
+goto(269, item)	{[value -> item.value', $/>/>=/	52	 
+goto(269, factor)	{[item -> factor.item', +/-/$]}	53	 
+goto(269, ()	{[factor -> (.value ), *///%/$]}	54	 
+goto(269, id)	{[factor -> id.call_function, *///%/$]}	55	 
+goto(269, const)	{[factor -> const., *///%/$]}	56	 
+goto(269, num_const)	{[const -> num_const., *///%/$]}	57	 
+goto(269, FLOAT)	{[const -> FLOAT., *///%/$]}	58	 
+goto(269, CHAR)	{[const -> CHAR., *///%/$]}	59	 
+goto(269, STR)	{[const -> STR., *///%/$]}	60	 
+goto(269, INT10)	{[num_const -> INT10., *///%/$]}	61	 
+goto(269, INT8)	{[num_const -> INT8., *///%/$]}	62	 
+goto(269, INT16)	{[num_const -> INT16., *///%/$]}	63	 

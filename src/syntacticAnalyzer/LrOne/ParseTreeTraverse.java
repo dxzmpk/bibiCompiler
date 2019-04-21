@@ -10,9 +10,9 @@ import java.util.Stack;
 public class ParseTreeTraverse {
 
 	public static interface Traverser {
-		public List<ParseTree.Node> processTreeNode(ParseTree.TreeNode treeNode) throws Exception;
+		public List<Process.Node> processTreeNode(Process.TreeNode treeNode) throws Exception;
 
-		public void processLeafNode(ParseTree.LeafNode leafNode) throws Exception;
+		public void processLeafNode(Process.LeafNode leafNode) throws Exception;
 	}
 
 	private Traverser traverser;
@@ -35,21 +35,21 @@ public class ParseTreeTraverse {
 		this.traverser = traverser;
 	}
 
-	public void traverse(ParseTree.Node root) throws Exception {
-		Stack<ParseTree.Node> nodeStack = new Stack<ParseTree.Node>();
+	public void traverse(Process.Node root) throws Exception {
+		Stack<Process.Node> nodeStack = new Stack<Process.Node>();
 		if (root != null)
 			nodeStack.push(root);
 
 		while (!nodeStack.isEmpty()) {
-			ParseTree.Node node = nodeStack.pop();
+			Process.Node node = nodeStack.pop();
 
-			if (node instanceof ParseTree.TreeNode) {
-				ParseTree.TreeNode treeNode = (ParseTree.TreeNode) node;
-				List<ParseTree.Node> offer = this.traverser.processTreeNode(treeNode);
+			if (node instanceof Process.TreeNode) {
+				Process.TreeNode treeNode = (Process.TreeNode) node;
+				List<Process.Node> offer = this.traverser.processTreeNode(treeNode);
 				if (offer != null) {
 				}
-			} else if (node instanceof ParseTree.LeafNode) {
-				ParseTree.LeafNode leafNode = (ParseTree.LeafNode) node;
+			} else if (node instanceof Process.LeafNode) {
+				Process.LeafNode leafNode = (Process.LeafNode) node;
 				this.traverser.processLeafNode(leafNode);
 			}
 		}

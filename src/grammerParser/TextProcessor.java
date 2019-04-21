@@ -1,5 +1,7 @@
 package grammerParser;
 
+import syntacticAnalyzer.implement.ActionOutput;
+
 import java.io.File;
 import java.io.RandomAccessFile;
 import java.util.ArrayList;
@@ -26,6 +28,11 @@ public class TextProcessor {
 	// 句法分析
 	public void Parsing(){
 		// 初始符号压入栈
+        System.out.println("Goto表：");
+        System.out.println("**********************************************");
+        ActionOutput.readFromGoto();
+		System.out.println("Action表：");
+		ActionOutput.readFromAction();
 		deduce_str.add("S");
 		String right;
 		String leftandinput;
@@ -58,8 +65,8 @@ public class TextProcessor {
 				for (int i=deduce_str.size()-1;i>-1;i--) {
 					process = process+deduce_str.get(i)+" ";
 				}
-				
-				results.add(process+"产生式："+deduce_str.get(deduce_str.size()-1)+" -> "+right);
+				//输出
+				results.add("产生式："+deduce_str.get(deduce_str.size()-1)+" -> "+right);
 				// 删掉产生的字符，压入堆栈
 				deduce_str.remove(deduce_str.size()-1);
 				if(right.equals("$")){
@@ -89,6 +96,13 @@ public class TextProcessor {
 		for(int i =results.size() - 1; i >= 0; i-- ){
 			System.out.println(results.get(i));
 		}
+
+
+
+		System.out.println("产生式："+"S' -> S");
+
+
+
 	}
 	
 	// 获得预测分析表中的产生式以及对应的select集
@@ -109,7 +123,6 @@ public class TextProcessor {
 				symbol = (text_line.split("#")[1]).split("->")[0].trim();
 				right = (text_line.split("#")[1]).split("->")[1].trim();
 				predictmap.put(left+"-"+symbol, right);
-				
 			}
 			predictfile.close();
 			
