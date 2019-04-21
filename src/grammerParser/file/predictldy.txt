@@ -1,27 +1,27 @@
-S#int -> func funcs
-S#short -> func funcs
-S#long -> func funcs
-S#char -> func funcs
-S#float -> func funcs
-S#double -> func funcs
-S#void -> func funcs
-S#unsigned -> func funcs
-funcs#int -> func funcs
-funcs#short -> func funcs
-funcs#long -> func funcs
-funcs#char -> func funcs
-funcs#float -> func funcs
-funcs#double -> func funcs
-funcs#void -> func funcs
-funcs#unsigned -> func funcs
-func#int -> type IDN ( args ) func_body
-func#short -> type IDN ( args ) func_body
-func#long -> type IDN ( args ) func_body
-func#char -> type IDN ( args ) func_body
-func#float -> type IDN ( args ) func_body
-func#double -> type IDN ( args ) func_body
-func#void -> type IDN ( args ) func_body
-func#unsigned -> type IDN ( args ) func_body
+S#int -> function functions
+S#short -> function functions
+S#long -> function functions
+S#char -> function functions
+S#float -> function functions
+S#double -> function functions
+S#void -> function functions
+S#unsigned -> function functions
+functions#int -> function functions
+functions#short -> function functions
+functions#long -> function functions
+functions#char -> function functions
+functions#float -> function functions
+functions#double -> function functions
+functions#void -> function functions
+functions#unsigned -> function functions
+function#int -> type IDN ( args ) function_body
+function#short -> type IDN ( args ) function_body
+function#long -> type IDN ( args ) function_body
+function#char -> type IDN ( args ) function_body
+function#float -> type IDN ( args ) function_body
+function#double -> type IDN ( args ) function_body
+function#void -> type IDN ( args ) function_body
+function#unsigned -> type IDN ( args ) function_body
 type#int -> int
 type#short -> short
 type#long -> long
@@ -41,34 +41,34 @@ args#unsigned -> type IDN arg
 args#) -> $
 arg#, -> , type IDN arg
 arg#) -> $
-func_body#; -> ;
-func_body#{ -> block
-block#{ -> { define_stmts stmts }
-define_stmts#int -> define_stmt define_stmts
-define_stmts#short -> define_stmt define_stmts
-define_stmts#long -> define_stmt define_stmts
-define_stmts#char -> define_stmt define_stmts
-define_stmts#float -> define_stmt define_stmts
-define_stmts#double -> define_stmt define_stmts
-define_stmts#void -> define_stmt define_stmts
-define_stmts#unsigned -> define_stmt define_stmts
-define_stmts#continue -> $
-define_stmts#break -> $
-define_stmts#return -> $
-define_stmts#while -> $
-define_stmts#for -> $
-define_stmts#do -> $
-define_stmts#if -> $
-define_stmts#switch -> $
-define_stmts#( -> $
-define_stmts#IDN -> $
-define_stmts#FLOAT -> $
-define_stmts#CHAR -> $
-define_stmts#STR -> $
-define_stmts#INT10 -> $
-define_stmts#INT8 -> $
-define_stmts#INT16 -> $
-define_stmts#} -> $
+function_body#; -> ;
+function_body#{ -> block
+block#{ -> { my_stmts stmts }
+my_stmts#int -> define_stmt my_stmts
+my_stmts#short -> define_stmt my_stmts
+my_stmts#long -> define_stmt my_stmts
+my_stmts#char -> define_stmt my_stmts
+my_stmts#float -> define_stmt my_stmts
+my_stmts#double -> define_stmt my_stmts
+my_stmts#void -> define_stmt my_stmts
+my_stmts#unsigned -> define_stmt my_stmts
+my_stmts#continue -> $
+my_stmts#break -> $
+my_stmts#return -> $
+my_stmts#while -> $
+my_stmts#for -> $
+my_stmts#do -> $
+my_stmts#if -> $
+my_stmts#switch -> $
+my_stmts#( -> $
+my_stmts#IDN -> $
+my_stmts#FLOAT -> $
+my_stmts#CHAR -> $
+my_stmts#STR -> $
+my_stmts#INT10 -> $
+my_stmts#INT8 -> $
+my_stmts#INT16 -> $
+my_stmts#} -> $
 define_stmt#int -> type IDN init vars ;
 define_stmt#short -> type IDN init vars ;
 define_stmt#long -> type IDN init vars ;
@@ -278,36 +278,36 @@ item'#&& -> $
 item'#|| -> $
 item'#) -> $
 factor#( -> ( value )
-factor#IDN -> IDN call_func
+factor#IDN -> IDN call_function
 factor#FLOAT -> const
 factor#CHAR -> const
 factor#STR -> const
 factor#INT10 -> const
 factor#INT8 -> const
 factor#INT16 -> const
-call_func#( -> ( es )
-call_func#* -> $
-call_func#/ -> $
-call_func#% -> $
-call_func#+ -> $
-call_func#- -> $
-call_func#> -> $
-call_func#>= -> $
-call_func#< -> $
-call_func#<= -> $
-call_func#== -> $
-call_func#!= -> $
-call_func#= -> $
-call_func#+= -> $
-call_func#-= -> $
-call_func#*= -> $
-call_func#/= -> $
-call_func#%= -> $
-call_func#, -> $
-call_func#; -> $
-call_func#&& -> $
-call_func#|| -> $
-call_func#) -> $
+call_function#( -> ( es )
+call_function#* -> $
+call_function#/ -> $
+call_function#% -> $
+call_function#+ -> $
+call_function#- -> $
+call_function#> -> $
+call_function#>= -> $
+call_function#< -> $
+call_function#<= -> $
+call_function#== -> $
+call_function#!= -> $
+call_function#= -> $
+call_function#+= -> $
+call_function#-= -> $
+call_function#*= -> $
+call_function#/= -> $
+call_function#%= -> $
+call_function#, -> $
+call_function#; -> $
+call_function#&& -> $
+call_function#|| -> $
+call_function#) -> $
 es#( -> isnull_expr isnull_es
 es#IDN -> isnull_expr isnull_es
 es#FLOAT -> isnull_expr isnull_es
@@ -401,17 +401,17 @@ item'#% -> % factor item'
 item'#+ -> $
 item'#- -> $
 factor#( -> ( value )
-factor#IDN -> IDN call_func
+factor#IDN -> IDN call_function
 factor#FLOAT -> const
 factor#CHAR -> const
 factor#STR -> const
 factor#INT10 -> const
 factor#INT8 -> const
 factor#INT16 -> const
-call_func#( -> ( es )
-call_func#* -> $
-call_func#/ -> $
-call_func#% -> $
+call_function#( -> ( es )
+call_function#* -> $
+call_function#/ -> $
+call_function#% -> $
 es#( -> isnull_expr isnull_es
 es#IDN -> isnull_expr isnull_es
 es#FLOAT -> isnull_expr isnull_es

@@ -7,6 +7,7 @@ public class Analyzer implements AnalyzerInterface {
 
     @Override
     public Closure initClosure(String fileName) {
+
         return null;
     }
 

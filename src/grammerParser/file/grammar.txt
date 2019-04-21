@@ -1,7 +1,7 @@
-S -> func funcs
-funcs -> func funcs
-funcs -> $
-func -> type IDN ( args ) func_body
+S -> function functions
+functions -> function functions
+functions -> $
+function -> type id ( args ) function_body
 type -> int
 type -> short
 type -> long
@@ -10,19 +10,19 @@ type -> float
 type -> double
 type -> void
 type -> unsigned type
-args -> type IDN arg
+args -> type id arg
 args -> $
-arg -> , type IDN arg
+arg -> , type id arg
 arg -> $
-func_body -> ;
-func_body -> block
+function_body -> ;
+function_body -> block
 block -> { define_stmts stmts }
 define_stmts -> define_stmt define_stmts
 define_stmts -> $
-define_stmt -> type IDN init vars ;
+define_stmt -> type id init vars ;
 init -> = expression
 init -> $
-vars -> , IDN init vars
+vars -> , id init vars
 vars -> $
 stmts -> stmt stmts
 stmts -> $
@@ -46,7 +46,7 @@ bool_expression -> lop expression bool_expression
 bool_expression -> $
 lop -> &&
 lop -> ||
-branch_stmt -> switch ( IDN ) { case_stmt case_stmts default_stmt }
+branch_stmt -> switch ( id ) { case_stmt case_stmts default_stmt }
 case_stmts -> case_stmt case_stmts
 case_stmts -> $
 case_stmt -> case const : stmts
@@ -80,10 +80,10 @@ item' -> / factor item'
 item' -> % factor item'
 item' -> $
 factor -> ( value )
-factor -> IDN call_func
+factor -> id call_function
 factor -> const
-call_func -> ( es )
-call_func -> $
+call_function -> ( es )
+call_function -> $
 es -> isnull_expr isnull_es
 isnull_es -> , isnull_expr isnull_es
 isnull_es -> $

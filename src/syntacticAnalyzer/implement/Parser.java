@@ -16,7 +16,7 @@ public class Parser {
 
 	public static void main(String[] args) {
 		Parser parser = new Parser();
-		parser.parseByFile("src/grammerParser/file/sample.txt");
+		parser.parseByFile("src/syntacticAnalyzer/file/sample.txt");
 	}
 	
 	public void parseByFile(String fileName1) {

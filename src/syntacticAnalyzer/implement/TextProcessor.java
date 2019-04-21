@@ -1,12 +1,11 @@
-package grammerParser;
+package syntacticAnalyzer.implement;
 
+import javax.swing.table.DefaultTableModel;
 import java.io.File;
 import java.io.RandomAccessFile;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-
-import javax.swing.table.DefaultTableModel;
 
 
 public class TextProcessor {
@@ -39,6 +38,7 @@ public class TextProcessor {
 			try {
 					if(input_cache.get(0).equals(deduce_str.get(deduce_str.size()-1))){
 						input_cache.remove(0);
+						int a;
 						deduce_str.remove(deduce_str.size()-1);
 						continue;
 					}
@@ -59,11 +59,12 @@ public class TextProcessor {
 					process = process+deduce_str.get(i)+" ";
 				}
 				
-				results.add(process+"产生式："+deduce_str.get(deduce_str.size()-1)+" -> "+right);
+				results.add(process+deduce_str.get(deduce_str.size()-1)+" -> "+right);
 				// 删掉产生的字符，压入堆栈
 				deduce_str.remove(deduce_str.size()-1);
 				if(right.equals("$")){
 					// 只弹不压
+					int c;
 				}
 				else {
 					String[] arg = right.split(" ");
@@ -106,6 +107,7 @@ public class TextProcessor {
 			RandomAccessFile predictfile = new RandomAccessFile(file,"r");
 			while ((text_line = predictfile.readLine())!=null){
 				left = text_line.split("#")[0];
+				int a;
 				symbol = (text_line.split("#")[1]).split("->")[0].trim();
 				right = (text_line.split("#")[1]).split("->")[1].trim();
 				predictmap.put(left+"-"+symbol, right);
