@@ -16,7 +16,7 @@ public class ClosureTest extends BaseTest {
         Item item = new Item(0,0);
         ProductionProcessor productionProcessor = new ProductionProcessor();
         List<Production> productions = productionProcessor.readProductionFromFile("src/dxzmpk/file/grammerSample.txt");
-        Closure closure1 = closureBuilder.closureBuilder(item,productions);
+        Closure closure1 = closureBuilder.buildClosure(item,productions);
         System.out.println(closure1.getItems().size());
         System.out.println(closure1.getItems().toString());
         System.out.println(productions.toString());
@@ -28,7 +28,7 @@ public class ClosureTest extends BaseTest {
         Item item = new Item(0,0);
         ProductionProcessor productionProcessor = new ProductionProcessor();
         List<Production> productions = productionProcessor.readProductionFromFile("src/dxzmpk/file/grammerSample.txt");
-        Closure closure1 = closureBuilder.closureBuilder(item,productions);
+        Closure closure1 = closureBuilder.buildClosure(item,productions);
         Closure closure = closureBuilder.gotoFunction(closure1,"(",productions);
         System.out.println(closure.toString());
         System.out.println(closure.getItems().size());

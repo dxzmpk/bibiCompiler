@@ -13,7 +13,7 @@ public interface ClosureInterface {
      * @param item
      * @return
      */
-    public Closure closureBuilder(Item item, List<Production> productions);
+    public Closure buildClosure(Item item, List<Production> productions);
 
 
     /**

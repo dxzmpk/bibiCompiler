@@ -31,7 +31,7 @@ public class Production implements ProductionInterface {
         return "Production{" +
                 "left='" + left + '\'' +
                 ", right=" + Arrays.toString(right) +
-                ", num=" + num +
+                ", statusNum=" + num +
                 '}';
     }
 }

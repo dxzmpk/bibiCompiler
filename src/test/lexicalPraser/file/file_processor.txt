@@ -2,7 +2,7 @@ int main(){
     static float app_le = 1.001;
     if(a > 1) {
         a = a + 1;
-    }@
+    }
     /*主程序*/
     do {
         a = a / 1e-1;

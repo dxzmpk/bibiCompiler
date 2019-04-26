@@ -10,7 +10,7 @@ public class ClosureBuilder implements ClosureInterface {
 
 
     @Override
-    public Closure closureBuilder(Item item, List<Production> productions) {
+    public Closure buildClosure(Item item, List<Production> productions) {
 
         Closure closure = new Closure();
 
@@ -73,8 +73,9 @@ public class ClosureBuilder implements ClosureInterface {
                  newItem = new Item(item.productionNum, item.pointAligin + 1);
                  items.add(newItem);
             }
+            if(items.size() == 0) return null;
         }
-        toClosure = closureBuilder(newItem,productions);
+        toClosure = buildClosure(newItem,productions);
         for (Item item : items
              ) {
             if(!toClosure.getItems().contains(item)){

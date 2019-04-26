@@ -1,7 +1,6 @@
 package lexicalPraser.implement;
 
 import lexicalPraser.interfaces.DfaInterface;
-import lexicalPraser.interfaces.FileProcessorInterface;
 import lexicalPraser.model.LexicalNames;
 import lexicalPraser.model.TokenItem;
 
@@ -59,7 +58,7 @@ public class DFA implements DfaInterface {
 
     @Override
     public TokenItem getRelop(FileProcessor fileProcessor) {
-        TokenItem tokenItem = new TokenItem(LexicalNames.RELOP);
+        TokenItem tokenItem = new TokenItem(LexicalNames.RELOP.toString());
         int state = 0;
         char c ;
         while(true){
@@ -100,7 +99,7 @@ public class DFA implements DfaInterface {
                     tokenItem.setInitialWord("==");
                     return tokenItem;
                 case 7:
-                    tokenItem.setLexicalName(LexicalNames.SYMBOL);
+                    tokenItem.setLexicalName(LexicalNames.SYMBOL.toString());
                     fileProcessor.pushBackLastCharacter();
                     tokenItem.setInitialWord("=");
                     tokenItem.setValue("AS");
@@ -125,7 +124,7 @@ public class DFA implements DfaInterface {
 
     @Override
     public TokenItem getIdentiFier(FileProcessor fileProcessor) {
-    	TokenItem tokenItem = new TokenItem(LexicalNames.ID);
+    	TokenItem tokenItem = new TokenItem(LexicalNames.ID.toString());
         int state =9;
         char c;
         StringBuilder value = new StringBuilder();
@@ -153,8 +152,7 @@ public class DFA implements DfaInterface {
                 case 11:{
                     fileProcessor.pushBackLastCharacter();
                     if(KeyWordItems.isKeyWord(value.toString().toUpperCase())){
-                        tokenItem.setInitialWord(value.toString());
-                        tokenItem.setLexicalName(LexicalNames.valueOf(value.toString().toUpperCase()));
+                        tokenItem.setValue(value.toString());
                         return tokenItem;
                     } else {
                         tokenItem.setValue(value.toString());
@@ -168,7 +166,7 @@ public class DFA implements DfaInterface {
 
     @Override
     public TokenItem getDigitalNumber(FileProcessor fileProcessor) {
-        TokenItem tokenItem = new TokenItem(LexicalNames.DIGIT);
+        TokenItem tokenItem = new TokenItem(LexicalNames.DIGIT.toString());
         int state = 12;
         StringBuilder value = new StringBuilder();
         char c;
@@ -267,7 +265,7 @@ public class DFA implements DfaInterface {
     @Override
     public TokenItem getSymbol(FileProcessor fileProcessor) {
         char symbol = fileProcessor.getNextCharacter();
-        TokenItem tokenItem = new TokenItem(LexicalNames.SYMBOL);
+        TokenItem tokenItem = new TokenItem("" + symbol);
         String string = "" + (int)symbol;
         tokenItem.setValue(string);
         tokenItem.setInitialWord("" + symbol);
@@ -277,7 +275,7 @@ public class DFA implements DfaInterface {
     @Override
     public TokenItem getOperator(FileProcessor fileProcessor) {
         char symbol = fileProcessor.getNextCharacter();
-        TokenItem tokenItem = new TokenItem(LexicalNames.OPERATOR);
+        TokenItem tokenItem = new TokenItem(symbol + "");
         String string = "" + symbol;
         tokenItem.setValue(string);
         tokenItem.setInitialWord(string);
@@ -286,7 +284,7 @@ public class DFA implements DfaInterface {
 
     @Override
     public TokenItem getNote(FileProcessor fileProcessor) {
-    	TokenItem tokenItem = new TokenItem(LexicalNames.NOTE);
+    	TokenItem tokenItem = new TokenItem(LexicalNames.NOTE.toString());
         int state =22;
         StringBuilder value = new StringBuilder();
         char c;
@@ -336,7 +334,7 @@ public class DFA implements DfaInterface {
             	fail(fileProcessor);
             	break;
             case 28:
-            	tokenItem.setLexicalName(LexicalNames.OPERATOR);
+            	tokenItem.setLexicalName("=");
                 fileProcessor.pushBackLastCharacter();
                 tokenItem.setValue(value.toString());
                 tokenItem.setInitialWord(value.toString());

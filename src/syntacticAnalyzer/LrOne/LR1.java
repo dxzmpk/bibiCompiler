@@ -94,7 +94,7 @@ public class LR1 {
 				break;
 			}
 		}
-		logger.info("LR1 Table constructed with:\n" +
+		logger.info("LR1 TableGenerater constructed with:\n" +
 					this.terminalSymbols.size() + " terminal symbols\n" +
 					this.nonTerminalSymbols.size() + " non terminal symbols\n" +
 					this.startSymbol + " as the start symbol\n" +

@@ -4,15 +4,20 @@ public class TokenItem {
 
     public String initialWord;
 
-    LexicalNames lexicalName;
+    String lexicalName;
 
     String value;
 
-    public TokenItem(LexicalNames lexicalName) {
+    public TokenItem(String lexicalName) {
         this.lexicalName = lexicalName;
     }
 
     public TokenItem() {
+    }
+
+    public TokenItem(String initialWord, String lexicalName) {
+        this.initialWord = initialWord;
+        this.lexicalName = lexicalName;
     }
 
     public String getInitialWord() {
@@ -23,11 +28,11 @@ public class TokenItem {
         this.initialWord = initialWord;
     }
 
-    public LexicalNames getLexicalName() {
+    public String getLexicalName() {
         return lexicalName;
     }
 
-    public void setLexicalName(LexicalNames lexicalName) {
+    public void setLexicalName(String lexicalName) {
         this.lexicalName = lexicalName;
     }
 
